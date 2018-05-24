@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/evpi.css">
+    <link rel="stylesheet" href="style/select.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="style/zm.css">
+    <script text="text/javascript" src="js/pinying.js" charset="GBK"></script>
+    <script text="text/javascript" src="js/sort.js"></script>
+</head>
+
+<body>
+    <button class="sdasdw">dsadwsd</button>
+    <div class="mask">
+        <div class="prop">
+            <i class="mask_close">X</i>
+            <div class="preview">
+                <label>已选择</label>
+                <span>A擅长1<img src="images/close.png"></span>
+                <span>B擅长1<img src="images/close.png"></span>
+                <span>F如果现实不下，折行显示<img src="images/close.png"></span>
+            </div>
+            <div class="selection">
+                <div class="optionGroup">
+                    <div class="active">ABCDEF</div>
+                    <div>GHIJK</div>
+                    <div>LMNOP</div>
+                    <div>QRSTU</div>
+                    <div>VWXYZ#</div>
+                </div>
+                <div class="sort_box">
+                    <div class="option on"></div>
+                    <div class="option"></div>
+                    <div class="option"></div>
+                    <div class="option"></div>
+                    <div class="option"></div>
+                </div>
+            </div>
+            <div class="submission_box">找不到
+                <input type="text" placeholder="没有合适的？请在此输入">
+                <button>提交审核</button>
+            </div>
+            <div class="confirm_box">添加的标签需要平台审核，方可通过使用。
+                <button class="confirm">确认</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    $(".sdasdw").click(function() {
+        var bheight = $(document).height();
+        $(".mask").fadeIn();
+
+        $(".mask").css("height", bheight);
+
+        $('.mask_close').click(function() {
+            $(this).parents('.mask').fadeOut();
+        });
+    })
+    $('.optionGroup div').click(function() {
+        $(".optionGroup div").eq($(this).index()).addClass("active").siblings().removeClass("active");
+
+        $(".option").eq($(this).index()).addClass("on").siblings().removeClass("on");
+    });
+</script>
+<script src="js/zm.js"></script>
+
+</html>

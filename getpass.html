@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/getpass.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/logo1.png" alt="logo1" class="logo1">
+        <img src="images/logo2.png" alt="logo2" class="logo2">
+    </header>
+    <div class="getpasscon">
+        <h1>找回密码</h1>
+        <div><span>手机号码</span><input type="text" placeholder="请输入您的手机号" class="user"></div>
+        <div><span>验证码</span><input type="text" placeholder="请输入验证码" class="vercode"><button class="getvercode">获取验证码</button></div>
+        <button class="nextStep">下一步</button>
+    </div>
+</body>
+<script>
+    $('.nextStep').click(function() {
+        location.href = 'getpass2.html'
+    });
+    var countdown = 60;
+
+    function invokeSettime(obj) {
+        var countdown = 60;
+        settime(obj);
+
+        function settime(obj) {
+            if (countdown == 0) {
+                $(obj).attr("disabled", false);
+                $(obj).text("获取验证码");
+                $(obj).css('background', '#10d1a0');
+                countdown = 60;
+                return;
+            } else {
+                $(obj).attr("disabled", true);
+                $(obj).text(countdown + "S后获取验证码");
+                $(obj).css('background', '#dddddd');
+                countdown--;
+            }
+            setTimeout(function() {
+                settime(obj)
+            }, 1000)
+        }
+    }
+
+    $(".getvercode").click(function() {
+        invokeSettime($(this))
+    });
+</script>
+
+</html>

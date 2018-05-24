@@ -1,0 +1,119 @@
+body {
+  background: url(../images/login_bg.png);
+  display: block;
+}
+.main {
+  margin-top: 300px;
+}
+.main .maincon {
+  position: relative;
+  width: 488px;
+  min-height: 468px;
+  background: #ffffff;
+  margin: auto;
+  border-radius: 15px;
+}
+.main .maincon .mainlogo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: #ffffff;
+  position: absolute;
+  top: -60px;
+  left: 33%;
+  z-index: 9;
+}
+.main .maincon .mainlogo .logoimg {
+  display: block;
+  margin: auto;
+  margin-top: 40px;
+}
+.main .maincon .logocon {
+  position: absolute;
+  top: -180px;
+  left: 16%;
+}
+.main .maincon .connav {
+  width: 330px;
+  height: 350px;
+  margin: auto;
+  text-align: center;
+  position: absolute;
+  top: 60px;
+  left: 78px;
+  z-index: 10;
+}
+.main .maincon .connav h1 {
+  font-size: 28px;
+}
+.main .maincon .connav .user {
+  margin-top: 35px;
+}
+.main .maincon .connav .password {
+  margin-top: 16px;
+}
+.main .maincon .connav input[type='text'],
+.main .maincon .connav input[type='password'] {
+  font-size: 16px;
+  width: 100%;
+  height: 40px;
+  padding-bottom: 4px;
+  border-bottom: 1px #e6e6e6 solid;
+  display: block;
+}
+.main .maincon .connav .error label {
+  text-align: left;
+  display: block;
+  color: #ff6f4b;
+}
+.main .maincon .connav .error input[type='text'],
+.main .maincon .connav .error input[type='password'] {
+  border-bottom: 1px #ff3300 solid;
+}
+.main .maincon .connav input:focus {
+  border-bottom: 1px #10d1a0 solid;
+}
+.main .maincon .connav .userProtocol {
+  float: left;
+  display: block;
+  line-height: 50px;
+}
+.main .maincon .connav .userProtocol a {
+  color: #10d1a0;
+}
+.main .maincon .connav button {
+  width: 100%;
+  height: 46px;
+  bottom: 0;
+  margin-top: 82px;
+  background: #10d1a0;
+  color: #ffffff;
+  font-size: 20px;
+  display: block;
+  border-radius: 3px;
+}
+.main .maincon .connav .registerBtn {
+  margin-top: 20px;
+}
+.main .maincon .connav .loginFunction {
+  margin-top: 15px;
+}
+.main .maincon .connav .loginFunction a {
+  color: #10d1a0;
+}
+.main .maincon .connav .loginFunction .register,
+.main .maincon .connav .loginFunction .loginHerf {
+  float: left;
+  text-decoration: underline;
+}
+.main .maincon .connav .loginFunction .forget {
+  float: right;
+}
+.main .registercon {
+  min-height: 536px;
+}
+.dowloadHerf {
+  display: block;
+  text-align: center;
+  margin-top: 36px;
+}

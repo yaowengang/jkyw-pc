@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/evpi.css">
+    <link rel="stylesheet" href="style/select.css">
+    <link rel="stylesheet" href="style/zm.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script text="text/javascript" src="js/pinying.js" charset="GBK"></script>
+    <script text="text/javascript" src="js/sort.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <img src="images/logo1.png" alt="logo1" class="logo1">
+        <img src="images/logo2.png" alt="logo2" class="logo2">
+    </header>
+    <div class="crumbs">
+        <span class="finish">注册</span>
+        <span class="underway">完善信息</span>
+        <span>等待审核</span>
+        <span>正常使用</span>
+    </div>
+    <div class="fillIn">
+        <div class="fuillLeft">
+            <img src="images/avatar.png" alt="">
+            <p>修改图像</p>
+        </div>
+        <div class="fuillRight">
+            <div><span>真实姓名</span><input type="text" placeholder="请输入您的真实姓名">
+                <label>请输入您的真实姓名</label>
+            </div>
+            <div><span>身份证号</span><input type="text" placeholder="请输入您的身份证号">
+                <label>请输入您的身份证号</label>
+            </div>
+            <div><span>职业类别</span>
+                <select class="">
+                        <option value="" data-display-text="JavaScript">None</option>
+                        <option value="CoffeeScript">CoffeeScript</option>
+                        <option value="Python">Python</option>
+                        <option value="freejs.net">freejs.net</option>
+                </select>
+                <label>请输入您的职业类别</label>
+            </div>
+            <div><span>职称</span><input type="text" placeholder="请输入您的职称">
+                <label>请输入您的职称</label>
+            </div>
+            <div><span>职业资格</span>
+                <div class="inputFile_box">
+                    <span>
+                        <img src="images/add_image.png" alt="">
+                        <input type="file" class="inputFile" accept="image/png,image/jpeg,image/gif">
+                    </span>
+                </div>
+            </div>
+            <div><span>所在地区</span>
+                <select class="">
+                        <option value="" data-display-text="JavaScript">None</option>
+                        <option value="CoffeeScript">CoffeeScript</option>
+                        <option value="Python">Python</option>
+                        <option value="freejs.net">freejs.net</option>
+                </select>
+            </div>
+            <div><span>详细地址</span><input type="text" placeholder="请输入您的详细地址"></div>
+            <div><span>所在机构</span>
+                <select class="">
+                    <option value="" data-display-text="JavaScript">None</option>
+                    <option value="CoffeeScript">CoffeeScript</option>
+                    <option value="Python">Python</option>
+                    <option value="freejs.net">freejs.net</option>
+                </select>
+                <pre class="notFind">没有找到？</pre>
+            </div>
+            <div>
+                <span>管理擅长</span>
+                <img src="images/edit_con.png" alt="" class="edit_btn">
+                <div class="goodAt">
+                </div>
+            </div>
+            <div><span>简介</span>
+                <textarea type="text" placeholder="请输入您的个人简介..."></textarea>
+            </div>
+            <button class="submitAudit">提交审核</button>
+        </div>
+    </div>
+    <div class="mask">
+        <div class="prop">
+            <i class="mask_close">X</i>
+            <div class="preview">
+                <label>已选择</label>
+                <span>A擅长1<img src="images/close.png"></span>
+                <span>B擅长1<img src="images/close.png"></span>
+                <span>F如果现实不下，折行显示<img src="images/close.png"></span>
+            </div>
+            <div class="selection">
+                <div class="optionGroup">
+                    <div class="active">ABCDEF</div>
+                    <div>GHIJK</div>
+                    <div>LMNOP</div>
+                    <div>QRSTU</div>
+                    <div>VWXYZ#</div>
+                </div>
+                <div class="sort_box">
+                    <div class="option on"></div>
+                    <div class="option"></div>
+                    <div class="option"></div>
+                    <div class="option"></div>
+                    <div class="option"></div>
+                </div>
+            </div>
+            <div class="submission_box">找不到
+                <input type="text" placeholder="没有合适的？请在此输入">
+                <button>提交审核</button>
+            </div>
+            <div class="confirm_box">添加的标签需要平台审核，方可通过使用。
+                <button class="confirm">确认</button>
+            </div>
+        </div>
+    </div>
+    <div class="mask1">
+        <div class="addinstitutions">
+            <i class="mask_close">X</i>
+            <h1>申请添加机构</h1>
+            <input type="text">
+            <label>申请添加的机构通过审核后方可选择。</label>
+            <button>提交审核</button>
+        </div>
+    </div>
+</body>
+<script src="js/select.js"></script>
+<script>
+    var bheight = $(document).height();
+    $(".mask1").css("height", bheight);
+    $('.inputFile').change(function() {
+        var _this = $(this);
+        var reader = new FileReader();
+        file = this.files[0];
+        reader.readAsDataURL(file);
+        reader.onload = function(e) {
+            var newUrl = this.result;
+            _this.parents('.inputFile_box').append("<span><img src='" + newUrl + "'/><i class='close'>x</i></span>")
+        };
+
+    })
+    $('.inputFile_box').on('click', '.close', function() {
+        $(this).parent('span').remove();
+    })
+    $('.edit_btn').click(function() {
+        $(".mask").fadeIn();
+        $(".mask").css("height", bheight);
+        $('.mask_close').click(function() {
+            $(this).parents('.mask').fadeOut();
+        });
+    })
+    $('.confirm').click(function() {
+        console.log($('.preview span').text());
+        $('.goodAt').html('');
+        $('.preview span').each(function() {
+            var _thistext = $(this).text();
+            var taghtml = "<span>" + _thistext + "<img src='../images/close.png'></span>"
+            $('.goodAt').append(taghtml);
+        })
+        $(".edit_btn").css({
+            'left': '320px'
+        });
+        $(".mask").fadeOut();
+    })
+
+    $('.notFind').click(function() {
+        $(".mask1").fadeIn();
+        $('.mask_close').click(function() {
+            $(this).parents('.mask1').fadeOut();
+        });
+    })
+    $('.submitAudit').click(function() {
+        location.href = 'waitingAudit.html'
+    })
+</script>
+
+<script src="js/zm.js"></script>
+
+</html>

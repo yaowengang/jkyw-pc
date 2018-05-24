@@ -1,0 +1,128 @@
+.main_boby .content {
+  width: 100%;
+  display: block;
+}
+.main_boby .content .content_bottom {
+  border-top: #f5f5f5 12px solid;
+}
+.main_boby .content .content_bottom h1 {
+  border-bottom: #f5f5f5 1px solid;
+  font-size: 20px;
+  font-weight: bold;
+  color: #666666;
+  line-height: 80px;
+  padding-left: 96px;
+}
+.main_boby .content .content_bottom .addManage {
+  width: 520px;
+  margin: auto;
+}
+.main_boby .content .content_bottom .addManage > div {
+  margin-top: 20px;
+}
+.main_boby .content .content_bottom .addManage > div label {
+  width: 110px;
+  color: #999999;
+  font-size: 14px;
+  display: inline-block;
+  text-align: right;
+  line-height: 40px;
+  vertical-align: top;
+  position: relative;
+}
+.main_boby .content .content_bottom .addManage > div label::after {
+  content: "*";
+  position: absolute;
+  line-height: 20px;
+  display: inline-block;
+  width: 8px;
+  text-align: center;
+  color: #ff3300;
+  top: 16px;
+  right: -12px;
+}
+.main_boby .content .content_bottom .addManage > div input {
+  height: 40px;
+  background: #f5f5f5;
+  margin-left: 30px;
+  border-radius: 3px;
+  border: 1px #e6e6e6 solid;
+  padding: 12px 13px;
+  width: 300px;
+}
+.main_boby .content .content_bottom .addManage > div input:focus {
+  border: 1px #10d1a0 solid;
+  background: #ffffff;
+}
+.main_boby .content .content_bottom .addManage > div .unit {
+  margin-left: -34px;
+  color: #999999;
+}
+.main_boby .content .content_bottom .addManage > div > div {
+  width: 375px;
+  min-height: 40px;
+  display: inline-block;
+  margin-left: 30px;
+  position: relative;
+}
+.main_boby .content .content_bottom .addManage > div > div.task ul li {
+  font-size: 14px;
+  background: #f5f5f5;
+  color: #333333;
+  border: #e6e6e6 1px solid;
+  border-radius: 3px;
+  line-height: 40px;
+  height: 40px;
+  margin: 5px auto;
+  padding: 0 15px 0 15px;
+}
+.main_boby .content .content_bottom .addManage > div > div.task ul li div {
+  display: flex;
+  justify-content: space-between;
+}
+.main_boby .content .content_bottom .addManage > div > div.task ul li div span {
+  display: inline-block;
+}
+.main_boby .content .content_bottom .addManage > div > div.task ul li div span i {
+  font-size: 20px;
+  color: #10d1a0;
+  margin: auto 5px;
+}
+.main_boby .content .content_bottom .addManage > div > div .edit_btn {
+  position: absolute;
+  left: 0px;
+  top: 6px;
+}
+.main_boby .content .content_bottom .addManage > div > div .goodAt {
+  width: 290px;
+  display: inline-block;
+}
+.main_boby .content .content_bottom .addManage > div > div .goodAt span {
+  line-height: 28px;
+  display: inline-block;
+  background: #10d1a0;
+  margin: auto 4px;
+  font-size: 12px;
+  color: #ffffff;
+  text-align: center;
+  padding-right: 14px;
+  padding-left: 14px;
+  border-right: #10d1a0 solid 23px;
+  position: relative;
+  margin-top: 8px;
+}
+.main_boby .content .content_bottom .addManage > div > div .goodAt span img {
+  position: absolute;
+  right: -22px;
+  top: 1px;
+}
+.main_boby .content .content_bottom .addManage > div > div button {
+  line-height: 30px;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 14px;
+  color: #10cf9e;
+  border: 1px #10cf9e solid;
+  background: #ffffff;
+  border-radius: 3px;
+}

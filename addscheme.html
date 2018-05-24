@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/common.css">
+    <link rel="stylesheet" href="style/addservic.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_420278_ff6suhdpderyhkt9.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="style/select.css">
+    <link rel="stylesheet" href="style/priceAndtype.css">
+    <style>
+        .dropdown {
+            width: 297px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="userImg">
+            <img src="images/userimage.png" alt="">
+            <p>陈独秀</p>
+        </div>
+        <div class="menu">
+            <dl>
+                <dt><i class="iconfont icon-gongzuotai"></i>工作台</i></dt>
+            </dl>
+            <dl class="active">
+                <dt><i class="iconfont icon-ffuwu"></i>医师管理服务<i class="iconfont icon-chevron state"></i></dt>
+                <dd><a href="ServiceList.html">服务列表</a></dd>
+                <dd class="active"><a href="addServic.html">新增服务</a></dd>
+                <dd><a href="##">查看服务使用用户</a></dd>
+            </dl>
+            <dl>
+                <dt><i class="iconfont icon-fangan"></i>医师方案管理<i class="iconfont icon-jiantou state"></i></dt>
+                <dd><a href="##">服务列表</a></dd>
+                <dd><a href="##">新增服务</a></dd>
+                <dd><a href="##">查看服务使用用户</a></dd>
+            </dl>
+            <dl>
+                <dt><i class="iconfont icon-pinggu"></i>医师评估管理<i class="iconfont icon-jiantou state"></i></dt>
+                <dd><a href="##">服务列表</a></dd>
+                <dd><a href="##">新增服务</a></dd>
+                <dd><a href="##">查看服务使用用户</a></dd>
+            </dl>
+            <dl>
+                <dt><i class="iconfont icon-zhuanlan"></i>医师专栏管理<i class="iconfont icon-jiantou state"></i></dt>
+                <dd><a href="##">服务列表</a></dd>
+                <dd><a href="##">新增服务</a></dd>
+                <dd><a href="##">查看服务使用用户</a></dd>
+            </dl>
+            <dl>
+                <dt><i class="iconfont icon-wenda"></i>医师问答管理<i class="iconfont icon-jiantou state"></i></dt>
+                <dd><a href="##">服务列表</a></dd>
+                <dd><a href="##">新增服务</a></dd>
+                <dd><a href="##">查看服务使用用户</a></dd>
+            </dl>
+            <dl>
+                <dt><i class="iconfont icon-xiaoxi1"></i>康信<i class="iconfont icon-jiantou state"></i></dt>
+                <dd><a href="##">服务列表</a></dd>
+                <dd><a href="##">新增服务</a></dd>
+                <dd><a href="##">查看服务使用用户</a></dd>
+            </dl>
+        </div>
+    </div>
+    <div class="main_boby">
+        <div class="title">
+            <img src="images/common_logo.png" alt="" class="logo1">
+            <img src="images/common_down.png" alt="" class="logo2">
+        </div>
+        <div class="content">
+            <div class="content_top">
+                <h1>新增服务</h1>
+                <div>
+                    <button>咨询服务</button>
+                    <button>健康咨询</button>
+                    <button class="active">方案服务</button>
+                </div>
+            </div>
+            <div class="content_bottom">
+                <div class="service_add">
+                    <div>
+                        <label class="mandatory">方案</label>
+                        <select class="">
+                                <option value="" data-display-text="JavaScript">None</option>
+                                <option value="CoffeeScript">CoffeeScript</option>
+                                <option value="Python">Python</option>
+                                <option value="freejs.net">freejs.net</option>
+                        </select>
+                    </div>
+                    <div><label class="mandatory">服务名称</label><input type="text" placeholder="请输入服务名称"></div>
+                    <div><label class="mandatory">服务间接</label><textarea type="text" placeholder="请输入服务简介..."></textarea></div>
+                    <div><label class="mandatory">封面</label>
+                        <div class="inputFile_box">
+                            <span>
+                              <img src="images/add_image.png" alt="">
+                              <input type="file" class="inputFile" accept="image/png,image/jpeg,image/gif">
+                          </span>
+                        </div>
+                    </div>
+                    <div><label>标签</label>
+                        <div class="label_box">
+                            <input type="radio" name="label" id=""><span>热</span>
+                            <input type="radio" name="label" id=""><span>好评</span>
+                            <input type="radio" name="label" id=""><span>6折</span>
+                            <input type="radio" name="label" id=""><span>7折</span>
+                            <input type="radio" name="label" id=""><span>8折</span>
+                            <input type="radio" name="label" id=""><span>9折</span>
+                        </div>
+                    </div>
+                    <div><label class="mandatory">类型及价格</label>
+                        <div class="scheme_price_box">
+                            <div class="priceAndtype">还未设置类型及价格</div>
+                            <button class="addPriceAndType">设置类型及价格</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="operatingArea">
+                    <button>直接发布</button>
+                    <button>存为草稿</button>
+                    <button>取消</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    <div class="mask">
+        <div class="prop">
+            <i class="mask_close iconfont icon-guanbi"></i>
+            <h1>设置类型及价格</h1>
+            <div class="set">
+                <div class="ischeck">
+                    <div class="title">
+                        <span><input type="checkbox"class="input_check" id="check1"><label for="check1"></label></span>
+                        <div>共享方案</div>
+                    </div>
+                    <div class="write">
+                        <label class="mandatory">服务价格</label><input type="text" placeholder="请输入服务价格" disabled class="servicePrice">
+                        <span class="unit">康币</span>
+                    </div>
+                </div>
+                <div class="ischeck">
+                    <div class="title">
+                        <span><input type="checkbox"class="input_check" id="check2"><label for="check2"></label></span>
+                        <div>共享方案、康信群支持</div>
+                    </div>
+                    <div class="write">
+                        <label class="mandatory">服务价格</label><input type="text" placeholder="请输入服务名称" disabled class="servicePrice">
+                        <span class="unit">康币</span>
+                    </div>
+                    <div class="write">
+                        <label class="mandatory">康信群</label>
+                        <select class="">
+                            <option value="" data-display-text="JavaScript">None</option>
+                            <option value="CoffeeScript">CoffeeScript</option>
+                            <option value="Python">Python</option>
+                            <option value="freejs.net">freejs.net</option>
+                        </select>
+                    </div>
+                    <div class="write">
+                        <label class="mandatory">服务周期</label><input type="text" placeholder="请输入服务周期" disabled>
+                        <span class="unit">天</span>
+                    </div>
+                    <div class="write">
+                        <label class="mandatory">续费价格</label><input type="text" placeholder="请输入续费价格" disabled>
+                        <span class="unit">康币</span>
+                    </div>
+                </div>
+                <div class="ischeck">
+                    <div class="title">
+                        <span><input type="checkbox"class="input_check" id="check3"><label for="check3"></label></span>
+                        <div>定制方案、一对一支持</div>
+                    </div>
+                    <div class="write">
+                        <label class="mandatory">服务价格</label><input type="text" placeholder="请输入服务价格" disabled class="servicePrice">
+                        <span class="unit">康币</span>
+                    </div>
+                    <div class="write">
+                        <label class="mandatory">服务周期</label><input type="text" placeholder="请输入服务周期" disabled>
+                        <span class="unit">天</span>
+                    </div>
+                    <div class="write">
+                        <label class="mandatory">续费价格</label><input type="text" placeholder="请输入续费价格" disabled>
+                        <span class="unit">康币</span>
+                    </div>
+
+                </div>
+            </div>
+            <div class="confirm_box">
+                <button class="confirm">确认</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/select.js"></script>
+<script>
+    var bheight = $(document).height();
+    $("body").css("height", bheight);
+    $(".menu dl dt").click(function() {
+        console.log($(this).hasClass('active'))
+        var dl = $(this).parent('dl');
+        if (dl.hasClass('active')) {
+            dl.removeClass('active');
+            dl.find('.state').removeClass('icon-chevron').addClass('icon-jiantou');
+        } else {
+            dl.addClass('active').siblings().removeClass('active');
+            dl.find('.state').removeClass('icon-jiantou').addClass('icon-chevron');
+            dl.siblings().find('.state').removeClass('icon-chevron').addClass('icon-jiantou');
+        }
+    });
+    $('.inputFile').change(function() {
+        var _this = $(this);
+        var reader = new FileReader();
+        file = this.files[0];
+        reader.readAsDataURL(file);
+        reader.onload = function(e) {
+            var newUrl = this.result;
+            _this.parents('.inputFile_box').append("<span><img src='" + newUrl + "'/><i class='close'>x</i></span>")
+        };
+
+    })
+    $('.inputFile_box').on('click', '.close', function() {
+        $(this).parent('span').remove();
+    })
+
+    /*
+     *弹框
+     */
+    $(".addPriceAndType").click(function() {
+        $(".mask").fadeIn();
+        $(".mask").css("height", bheight);
+        $('.mask_close').click(function() {
+            $(this).parents('.mask').fadeOut();
+        });
+    })
+    $('.optionGroup div').click(function() {
+        $(".optionGroup div").eq($(this).index()).addClass("active").siblings().removeClass("active");
+        $(".option").eq($(this).index()).addClass("on").siblings().removeClass("on");
+    });
+    $('.input_check').click(function() {
+        if (this.checked) {
+            $(this).parents(".ischeck").addClass("checkTrue");
+            $(this).parents(".ischeck").find("input").removeAttr("disabled")
+        } else {
+            $(this).parents(".ischeck").removeClass("checkTrue");
+            $(this).parents(".ischeck").find(":text").attr("disabled", true);
+        }
+    });
+
+    $(".confirm").click(function() {
+        var priceList = [];
+        $(".checkTrue").each(function(e) {
+            var inputval = "";
+            var title = $(this).find(".title div").text();
+            var price = $(this).find(".servicePrice").val();
+            var unit = $(this).find(".servicePrice").next('.unit').text()
+            inputval = title + "," + price + unit
+                // if ($(this).find(".current").length > 0) {
+                //     inputval += $(".current").text();
+                // }
+                // $(this).find("input:text").each(function(e) {
+                //     console.log($(this).val())
+                //     inputval += $(this).val();
+                // })
+            priceList.push(inputval)
+
+        })
+        var priceAndtype = "";
+        for (var i = 0; i < priceList.length; i++) {
+            priceAndtype += "<p>" + priceList[i] + "</p>"
+        }
+        //console.log(priceAndtype)
+        $(".priceAndtype").html(priceAndtype);
+        $(".mask").fadeOut();
+    })
+</script>
+
+</html>

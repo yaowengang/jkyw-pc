@@ -1,0 +1,198 @@
+.main_boby{
+  .content{     
+  .returnSuperior{
+    padding-left: 80px;
+    line-height: 60px;
+    a{
+      color: #10d1a0;
+      font-size: 14px;
+      }
+    }
+    .contentcon{
+      width: 900px;
+      margin: auto;
+      position: relative;
+      >h1{
+        font-size: 24px;
+        font-weight: bold;
+        color: #666666;
+        span{
+          font-weight: 300;
+          color: #ffffff;
+          background: #0fc99a;
+          display: inline-block;
+          padding: 3px 8px;
+          font-size: 14px;
+          border-radius: 5px;
+          margin-left: 10px;
+          &.recommend{
+            border: 1px solid #ff3300;
+            color: #ff3300;
+            background: #ffffff;
+          }
+        }
+      }
+      >p{
+        font-size: 14px;
+        color: #999999;
+        line-height: 36px;
+      }
+      >.imageText{
+        .recomm{
+          font-size: 16px;
+          line-height: 24px;
+          font-weight: bold;
+          color: #666666;
+          margin: 16px auto;
+        }
+        .maintext{
+          font-size: 14px;
+          line-height: 24px;
+          color: #333333;
+          margin: 20px auto;
+          display: block;          
+        }
+        .addition{
+          color: #999999;
+          margin-top: 40px;
+          display: block;
+          .shoucang1{
+            float: right;
+            margin: auto 10px;
+            i{
+              color: #ffb400;
+            }
+          }
+          .xihuan{
+            float: right;
+            margin: auto 10px;
+            i{
+              color: #ff3300;
+            }
+          }
+        }
+      }
+    }
+    .operation{
+      text-align: center;
+
+      width: 900px;
+      margin:60px auto 100px;
+      button{
+        border: none;
+        background: #10d1a0;
+        height: 36px;
+        width: 120px;
+        text-align: center;
+        line-height: 36px;
+        color: #ffffff;
+        border-radius: 3px;
+        margin: 0 4px;
+        font-size: 20px;        
+      }
+    }
+    .commentArea{
+      width: 900px;
+      margin: auto;
+      margin-bottom: 80px;
+      .switch{
+        color: #999999;
+        cursor: pointer;
+      }
+      .Level1Comment{
+        margin: 20px auto;
+        width: 100%;
+        display: none;
+        .responder{
+          color: #333333;
+          line-height: 40px;
+          img{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+          }
+          span{
+            display: inline-block;
+          }
+          .commentTime{
+            float: right;
+            color: #999999;
+          }
+        }
+        .commentcon{
+          padding-left: 50px;
+          color: #333333;
+          line-height: 24px;
+          font-size: 14px;
+          .addition{
+            color: #999999;
+            .shoucang1{
+              float: right;
+              margin: auto 10px;
+              i{
+                color: #ffb400;
+              }
+            }
+            .xihuan{
+              float: right;
+              margin: auto 10px;
+              i{
+                color: #ff3300;
+              }
+            }            
+          }
+          .Level2Comment{
+            margin: 20px auto;
+            width: 100%;
+            .responder{
+              color: #333333;
+              line-height: 40px;
+              img{
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                margin-right: 10px;
+              }
+              span{
+                display: inline-block;
+              }
+              .commentTime{
+                float: right;
+                color: #999999;
+              }
+            }
+            .commentcon{
+              padding-left: 50px;
+              color: #333333;
+              line-height: 24px;
+              font-size: 14px;
+              .addition{
+                color: #999999;
+                .xihuan{
+                  float: left;
+                  margin: auto 10px;
+                  i{
+                    color: #ff3300;
+                  }
+                }            
+              }
+            }
+          }            
+        }
+      }
+    
+    }
+  }
+}
+.clearfix::after{
+  visibility: hidden;
+  display: inline-block;
+  clear: both;
+  height: 0;
+  content: "."
+}
+.clearfix{
+  zoom: 1;
+  vertical-align: top;
+}

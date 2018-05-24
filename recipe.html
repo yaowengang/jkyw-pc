@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_420278_op6wu543fwbi6bt9.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/select.js"></script>
+
+    <link rel="stylesheet" href="style/select.css">
+
+    <link rel="stylesheet" href="style/addManagement.css">
+    <style>
+        .task_recipe {
+            width: 375px;
+            min-height: 40px;
+            display: inline-block;
+            margin-left: 30px;
+            position: relative;
+            margin-top: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main_boby">
+        <div class="content">
+            <div class="content_bottom">
+                <div class="addManage">
+                    <div>
+                        <div class="task_recipe">
+                            <ul>
+                                <li>
+                                    <div class="recipe">
+                                        <h1>食谱（1）<i class="iconfont icon-jia"></i></h1>
+                                        <div class="recipe_detials">
+                                            <div class="recipe_class">
+                                                <div class="recipe_Name">早餐</div>
+                                                <div class="recipe_con">
+                                                    <p>
+                                                        <span>牛奶</span>
+                                                        <span class="iconfont icon-shanchu">删除</span>
+                                                        <span class="iconfont icon-bi1">编辑</span>
+                                                    </p>
+                                                    <p>
+                                                        <span>牛奶</span>
+                                                        <span class="iconfont icon-shanchu">删除</span>
+                                                        <span class="iconfont icon-bi1">编辑</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="recipe_class">
+                                                <div class="recipe_Name">午餐</div>
+                                                <div class="recipe_con">
+                                                    <p>
+                                                        <span>牛奶</span>
+                                                        <span class="iconfont icon-shanchu">删除</span>
+                                                        <span class="iconfont icon-bi1">编辑</span>
+                                                    </p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <i class="iconfont icon-jian1"></i>
+                                </li>
+                                <li>
+                                    <div class="recipe">
+                                        <h1>食谱（1）<i class="iconfont icon-jia"></i></h1>
+                                        <div class="recipe_detials">
+                                        </div>
+                                    </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <i class="iconfont icon-jian1"></i>
+    </li>
+    </ul>
+    </div>
+
+
+    <div class="addRecipe">
+        <div class="props">
+            <h1>编辑运动项目</h1>
+            <div class="choose">
+                <label>餐　　别：</label>
+                <select class="food_type">
+                            <option data-display-text="早餐" value="早餐">早餐</option>
+                            <option data-display-text="早加餐" value="早加餐">早加餐</option>
+                            <option data-display-text="午餐" value="午餐">午餐</option>
+                            <option data-display-text="午加餐" value="午加餐">午加餐</option>
+                            <option data-display-text="晚餐" value="晚餐">晚餐</option>
+                            <option data-display-text="晚加餐" value="晚加餐">晚加餐</option>
+                </select>
+            </div>
+            <div class="chooser_box">
+                <ul class="on">
+                    <li class="modification goal">
+                        <label>食物名称：</label>
+                        <input type="text" class="food_Name" placeholder="请输入食物名称">
+                    </li>
+                </ul>
+            </div>
+            <div class="operation">
+                <span>取消</span>
+                <span class="confirm">确定</span>
+                <span class="amend">修改</span>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    var bheight = $(document).height();
+    var thisRecipe, appendul;
+    $(".addRecipe").css("height", bheight);
+    $(".task_recipe").on("click", ".icon-jia", function() {
+        thisRecipe = $(this).parents("li");
+        $(".addRecipe").fadeIn();
+        $(".amend").hide();
+        $(".confirm").show();
+        $(".addRecipe .on .food_Name").val("")
+        $(".addRecipe .current").text("早餐")
+
+    })
+
+    $(".addRecipe .confirm").click(function() {
+        var type = $(".addRecipe .current").text();
+        var frequency = $(".addRecipe .on .food_Name").val();
+        var thistextList = [],
+            _this;
+        if (frequency) {
+            thisRecipe.find(".recipe_Name").each(function() {
+                thistextList.push($(this).text());
+                _this = $(this)
+            })
+            var num = $.inArray(type, thistextList)
+            if (num >= 0) {
+                console.log(typeof num)
+                appendul = _this.parents(".recipe_detials").find(".recipe_con");
+                console.log(appendul)
+                var appendP = '<p><span>' + frequency + '</span><span class="iconfont icon-shanchu">删除</span><span class="iconfont icon-bi1">编辑</span></p>';
+                appendul[num].innerHTML += appendP
+            } else {
+                appendul = thisRecipe.find(".recipe_detials");
+                console.log(appendul)
+                var appendDiv = '<div class="recipe_class"><div class="recipe_Name">' + type +
+                    '</div><div class="recipe_con"><p><span>' + frequency +
+                    '</span><span class="iconfont icon-shanchu">删除</span><span class="iconfont icon-bi1">编辑</span></p></div></div>'
+                appendul.append(appendDiv)
+            }
+        }
+        $(".addRecipe").fadeOut();
+    })
+    var oldcurrent, bi1btn;
+    $(".task_recipe").on("click", ".icon-bi1", function() {
+        bi1btn = $(this)
+        $(".addRecipe").fadeIn();
+        $(".confirm").hide();
+        $(".amend").show();
+        thisRecipe = bi1btn.parents("li");
+        // console.log($(this).parent("p").find("span:first").text())
+        // console.log($(this).parents(".recipe_class").find(".recipe_Name").text())
+        oldcurrent = $(this).parents(".recipe_class").find(".recipe_Name").text()
+        $(".addRecipe .on .food_Name").val($(this).parent("p").find("span:first").text())
+        $(".addRecipe .current").text(oldcurrent)
+    })
+    $(".addRecipe .amend").click(function() {
+        var type = $(".addRecipe .current").text();
+        var frequency = $(".addRecipe .on .food_Name").val();
+        if (oldcurrent == type) {
+            bi1btn.parent("p").find("span:first").text(frequency)
+        } else {
+            if (bi1btn.parents(".recipe_con").find("p").length > 1) {
+                bi1btn.parent("p").remove();
+            } else {
+                bi1btn.parents(".recipe_class").remove();
+            }
+            var thistextList = [],
+                _this;
+            if (frequency) {
+                thisRecipe.find(".recipe_Name").each(function() {
+                    thistextList.push($(this).text());
+                    _this = $(this)
+                })
+                var num = $.inArray(type, thistextList)
+                if (num >= 0) {
+                    appendul = _this.parents(".recipe_detials").find(".recipe_con");
+                    var appendP = '<p><span>' + frequency + '</span><span class="iconfont icon-shanchu">删除</span><span class="iconfont icon-bi1">编辑</span></p>';
+                    appendul[num].innerHTML += appendP
+                } else {
+                    appendul = thisRecipe.find(".recipe_detials");
+                    var appendDiv = '<div class="recipe_class"><div class="recipe_Name">' + type +
+                        '</div><div class="recipe_con"><p><span>' + frequency +
+                        '</span><span class="iconfont icon-shanchu">删除</span><span class="iconfont icon-bi1">编辑</span></p></div></div>'
+                    appendul.append(appendDiv)
+                }
+            }
+        }
+        $(".addRecipe").fadeOut();
+    })
+    $(".task_recipe").on('click', '.icon-shanchu', function() {
+        if ($(this).parents(".recipe_con").find("p").length > 1) {
+            $(this).parent("p").remove();
+        } else {
+            $(this).parents(".recipe_class").remove();
+        }
+    })
+</script>
+
+</html>

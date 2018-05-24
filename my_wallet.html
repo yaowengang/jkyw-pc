@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/common.css">
+    <link rel="stylesheet" href="style/my_wallet.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_420278_ff6suhdpderyhkt9.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <style>
+        .dropdown {
+            width: 297px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="userImg">
+            <img src="images/userimage.png" alt="">
+            <p>陈独秀</p>
+        </div>
+        <div class="menu">
+            <dl>
+                <dt><i class="iconfont icon-gongzuotai"></i>工作台</i></dt>
+            </dl>
+            <dl class="active">
+                <dt><i class="iconfont icon-ffuwu"></i>医师管理服务<i class="iconfont icon-chevron state"></i></dt>
+                <dd><a href="ServiceList.html">服务列表</a></dd>
+                <dd class="active"><a href="addServic.html">新增服务</a></dd>
+                <dd><a href="##">查看服务使用用户</a></dd>
+            </dl>
+            <dl>
+                <dt><i class="iconfont icon-fangan"></i>医师方案管理<i class="iconfont icon-jiantou state"></i></dt>
+                <dd><a href="##">服务列表</a></dd>
+                <dd><a href="##">新增服务</a></dd>
+                <dd><a href="##">查看服务使用用户</a></dd>
+            </dl>
+            <dl>
+                <dt><i class="iconfont icon-pinggu"></i>医师评估管理<i class="iconfont icon-jiantou state"></i></dt>
+                <dd><a href="##">服务列表</a></dd>
+                <dd><a href="##">新增服务</a></dd>
+                <dd><a href="##">查看服务使用用户</a></dd>
+            </dl>
+            <dl>
+                <dt><i class="iconfont icon-zhuanlan"></i>医师专栏管理<i class="iconfont icon-jiantou state"></i></dt>
+                <dd><a href="##">服务列表</a></dd>
+                <dd><a href="##">新增服务</a></dd>
+                <dd><a href="##">查看服务使用用户</a></dd>
+            </dl>
+            <dl>
+                <dt><i class="iconfont icon-wenda"></i>医师问答管理<i class="iconfont icon-jiantou state"></i></dt>
+                <dd><a href="##">服务列表</a></dd>
+                <dd><a href="##">新增服务</a></dd>
+                <dd><a href="##">查看服务使用用户</a></dd>
+            </dl>
+            <dl>
+                <dt><i class="iconfont icon-xiaoxi1"></i>康信<i class="iconfont icon-jiantou state"></i></dt>
+                <dd><a href="##">服务列表</a></dd>
+                <dd><a href="##">新增服务</a></dd>
+                <dd><a href="##">查看服务使用用户</a></dd>
+            </dl>
+        </div>
+    </div>
+    <div class="main_boby">
+        <div class="title">
+            <img src="images/common_logo.png" alt="" class="logo1">
+            <img src="images/common_down.png" alt="" class="logo2">
+        </div>
+        <div class="content">
+            <div class="content_top">
+                <div class="wallet">
+                    <div class="walletNumber"><span>7800</span><img src="images/gold.png" alt=""></div>
+                    <p>我的康币</p>
+                    <div class="operate">
+                        <button>充值</button>
+                        <button class="Withdraw">提现</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+<script>
+    var bheight = $(document).height();
+    $("body").css("height", bheight);
+    $(".menu dl dt").click(function() {
+        console.log($(this).hasClass('active'))
+        var dl = $(this).parent('dl');
+        if (dl.hasClass('active')) {
+            dl.removeClass('active');
+            dl.find('.state').removeClass('icon-chevron').addClass('icon-jiantou');
+        } else {
+            dl.addClass('active').siblings().removeClass('active');
+            dl.find('.state').removeClass('icon-jiantou').addClass('icon-chevron');
+            dl.siblings().find('.state').removeClass('icon-chevron').addClass('icon-jiantou');
+        }
+    });
+
+    $(".Withdraw").click(function() {
+        location.href = 'Withdraw.html'
+    })
+    $(".confirm").click(function() {
+
+        $(".mask").fadeOut();
+    })
+</script>
+
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/common.css">
+    <link rel="stylesheet" href="style/addAssess.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_420278_ff6suhdpderyhkt9.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="userImg">
+            <img src="images/userimage.png" alt="">
+            <p>陈独秀</p>
+        </div>
+        <div class="menu">
+            <dl>
+                <dt><i class="iconfont icon-gongzuotai"></i>工作台</i></dt>
+            </dl>
+            <dl class="active">
+                <dt><i class="iconfont icon-ffuwu"></i>医师管理服务<i class="iconfont icon-chevron state"></i></dt>
+                <dd class="active">服务列表</dd>
+                <dd>新增服务</dd>
+                <dd>查看服务使用用户</dd>
+            </dl>
+            <dl>
+                <dt><i class="iconfont icon-fangan"></i>医师方案管理<i class="iconfont icon-jiantou state"></i></dt>
+                <dd>服务列表</dd>
+                <dd>新增服务</dd>
+                <dd>查看服务使用用户</dd>
+            </dl>
+            <dl>
+                <dt><i class="iconfont icon-pinggu"></i>医师评估管理<i class="iconfont icon-jiantou state"></i></dt>
+                <dd>服务列表</dd>
+                <dd>新增服务</dd>
+                <dd>查看服务使用用户</dd>
+            </dl>
+            <dl>
+                <dt><i class="iconfont icon-zhuanlan"></i>医师专栏管理<i class="iconfont icon-jiantou state"></i></dt>
+                <dd>服务列表</dd>
+                <dd>新增服务</dd>
+                <dd>查看服务使用用户</dd>
+            </dl>
+            <dl>
+                <dt><i class="iconfont icon-wenda"></i>医师问答管理<i class="iconfont icon-jiantou state"></i></dt>
+                <dd>服务列表</dd>
+                <dd>新增服务</dd>
+                <dd>查看服务使用用户</dd>
+            </dl>
+            <dl>
+                <dt><i class="iconfont icon-xiaoxi1"></i>康信<i class="iconfont icon-jiantou state"></i></dt>
+                <dd>服务列表</dd>
+                <dd>新增服务</dd>
+                <dd>查看服务使用用户</dd>
+            </dl>
+        </div>
+    </div>
+    <div class="main_boby">
+        <div class="title">
+            <img src="images/common_logo.png" alt="" class="logo1">
+            <img src="images/common_down.png" alt="" class="logo2">
+        </div>
+        <div class="content">
+            <div class="content_top">
+                <h1>新增评估</h1>
+                <div class="write">
+                    <label class="mandatory">评估名称</label><input type="text" placeholder="请输入评估名称">
+                </div>
+            </div>
+            <div class="content_con">
+                <div class="editTopic">
+                    <h1>编辑题目</h1>
+                    <div class="topic">
+                        <!-- <section border="0" class="showAndHide_box">
+                            <div class="topic_title">
+                                <ul>
+                                    <li class="questionNo">1、</li>
+                                    <li>标题</li>
+                                    <li><input type="text" placeholder="请输入标题"></li>
+                                    <li>
+                                        <div><input id="item1" type="radio" name="option1" value="单选" checked=""><label for="item1"></label><span>单选</span></div>
+                                        <div><input id="item2" type="radio" name="option1" value="多选"><label for="item2"></label><span>多选</span></div>
+                                        <div><input id="item3" type="radio" name="option1" value="问答"><label for="item3"></label><span>问答</span></div>
+                                    </li>
+                                    <li class="deleteTopic">删除</li>
+                                </ul>
+                            </div>
+                            <div class="option">
+                                <div class="lastChoice">最少选择 <input type="text" value="2">项</div>
+                                <ul>
+                                    <li>选项<span class="orderNumber">A</span></li>
+                                    <li><input type="text" placeholder="请输入选项内容"></li>
+                                    <li><span class="deleteOption">删除</span></li>
+                                </ul>
+                                <ul>
+                                    <li>选项<span class="orderNumber">B</span></li>
+                                    <li><input type="text" placeholder="请输入选项内容"></li>
+                                    <li><span class="deleteOption">删除</span></li>
+                                </ul>
+                            </div>
+                            <div class="addoption"><button>添加选项</button></div>
+                            <div class="answer_box">
+                                <div class="lastnumber">回答不超过<input type="text" value="2">字</div>
+                            </div>
+                        </section> -->
+                    </div>
+                    <div class="addTopic"><button>添加题目</button></div>
+                </div>
+                <div class="operation">
+                    <button class="submint">完成</button>
+                    <button>取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mask">
+        <div class="prop">
+            <div class="mask_close iconfont icon-guanbi close"></div>
+            <div class="proptitle">提交评估结果</div>
+            <div class="propcon">评估结果提交后不能修改，确认提交？</div>
+            <div class="operation">
+                <button class="confim">提交</button>
+                <button class="close">取消</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var bheight = $(document).height();
+    $("body").css("height", bheight);
+    $(".menu dl dt").click(function() {
+        console.log($(this).hasClass('active'))
+        var dl = $(this).parent('dl');
+        if (dl.hasClass('active')) {
+            dl.removeClass('active');
+            dl.find('.state').removeClass('icon-chevron').addClass('icon-jiantou');
+        } else {
+            dl.addClass('active').siblings().removeClass('active');
+            dl.find('.state').removeClass('icon-jiantou').addClass('icon-chevron');
+            dl.siblings().find('.state').removeClass('icon-chevron').addClass('icon-jiantou');
+        }
+    });
+    $(".submint").click(function() {
+            $(".mask").css("height", bheight);
+            $(".mask").fadeIn();
+            $(".close").click(function() {
+
+                $(".mask").fadeOut();
+            })
+            $(".confim").click(function() {
+
+                $(".mask").fadeOut();
+            })
+        })
+        /*添加选项
+         */
+    var topicNum = 0,
+        letterArr = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K"],
+        a = 3;
+    $(".topic").on('click', '.addoption button', function() {
+        var _length = $(this).parents(".showAndHide_box").children(".option").children("ul").length;
+        if (_length < letterArr.length) {
+            var topicOption = "<ul><li>选项<span class='orderNumber'>" + letterArr[_length] +
+                "</span></li><li><input type='text' placeholder='请输入选项内容'></li><li><span class='deleteOption'>删除</span></li></ul>"
+            $(this).parents(".showAndHide_box").children(".option").append(topicOption);
+        } else {
+            alert("不能再添加了")
+        }
+    })
+
+    $(".topic").on('click', '.deleteTopic', function() {
+        if ($(".showAndHide_box").length > 1) {
+            $(this).parents(".showAndHide_box").remove();
+            $(".questionNo").each(function(i) {
+                $(this).text(i + 1)
+                $(this).parents("parents").find("input[type='radio']").attr("name", "option" + i)
+            })
+            topicNum--;
+        } else {
+            alert("只剩最后一题了")
+        }
+    })
+    $(".topic").on('click', '.deleteOption', function() {
+        if ($(this).parents(".option").find("ul").length > 1) {
+            var _ordertable = $(this).parents(".showAndHide_box")
+            $(this).parents("ul").remove();
+            //console.log(_orderNumber.length)
+            _ordertable.find(".orderNumber").each(function(i) {
+                    // i = i - 1
+                    console.log(i)
+                    $(this).text(letterArr[i])
+                })
+                //var _index = $(this).parents("ul").index()
+            a--;
+        } else {
+            alert("只剩一个选项了")
+        }
+    })
+
+    function addtableDom() {
+        topicNum++;
+        var tableDom = '<section border="0" class="showAndHide_box"><div class="topic_title"><ul><li class="questionNo">' + topicNum +
+            '、</li><li>标题</li><li><input type="text" placeholder="请输入标题"></li><li><div><input id="item1' + topicNum + '" type="radio" name="option' + topicNum +
+            '" value="单选" checked=""><label for="item1' + topicNum + '"></label><span>单选</span></div><div><input id="item2' + topicNum + '" type="radio" name="option' + topicNum +
+            '" value="多选"><label for="item2' + topicNum + '"></label><span>多选</span></div><div><input id="item3' + topicNum + '" type="radio" name="option' + topicNum +
+            '" value="问答"><label for="item3' + topicNum + '"></label><span>问答</span></div></li><li class="deleteTopic">删除</li></ul></div><div class="option">' +
+            '<div class="lastChoice">最少选择 <input type="text" value="2">项</div><ul><li>选项<span class="orderNumber">A</span></li><li>' +
+            '<input type="text" placeholder="请输入选项内容"></li><li><span class="deleteOption">删除</span></li></ul><ul><li>选项<span class="orderNumber">B</span></li>' +
+            '<li><input type="text" placeholder="请输入选项内容"></li><li><span class="deleteOption">删除</span></li></ul></div><div class="addoption">' +
+            '<button>添加选项</button></div><div class="answer_box"><div class="lastnumber">回答不超过<input type="text" value="2">字</div></div></section>'
+        $(".topic").append(tableDom);
+    }
+    addtableDom();
+    $(".addTopic button").click(function() {
+        addtableDom();
+    })
+    $(".topic").on('click', ':radio', function() {
+        var section = $(this).parents("section");
+        //console.log($(this).parent().parent().parent())
+        console.log(section)
+        if ($(this).val() == "多选") {
+            section.find(".answer_box").hide();
+            section.find(".option").show();
+            section.find(".addoption").show();
+            section.find(".lastChoice").show()
+        } else if ($(this).val() == "单选") {
+            section.find(".answer_box").hide();
+            section.find(".option").show();
+            section.find(".addoption").show();
+            section.find(".lastChoice").hide()
+        } else if ($(this).val() == "问答") {
+            section.find(".option").hide();
+            section.find(".addoption").hide();
+            section.find(".answer_box").show();
+        }
+    })
+</script>
+
+</html>

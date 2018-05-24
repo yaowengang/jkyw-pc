@@ -1,0 +1,325 @@
+.main_boby .content {
+  width: 100%;
+  display: block;
+}
+.main_boby .content .content_bottom {
+  border-top: #f5f5f5 12px solid;
+}
+.main_boby .content .content_bottom > h1 {
+  border-bottom: #f5f5f5 1px solid;
+  font-size: 20px;
+  font-weight: bold;
+  color: #666666;
+  line-height: 80px;
+  padding-left: 96px;
+}
+.main_boby .content .content_bottom .addManage {
+  width: 520px;
+  margin: auto;
+}
+.main_boby .content .content_bottom .addManage > div {
+  margin-top: 20px;
+}
+.main_boby .content .content_bottom .addManage > div label {
+  width: 110px;
+  color: #999999;
+  font-size: 14px;
+  display: inline-block;
+  text-align: right;
+  line-height: 40px;
+  vertical-align: top;
+  position: relative;
+}
+.main_boby .content .content_bottom .addManage > div label::after {
+  content: "*";
+  position: absolute;
+  line-height: 20px;
+  display: inline-block;
+  width: 8px;
+  text-align: center;
+  color: #ff3300;
+  top: 16px;
+  right: -12px;
+}
+.main_boby .content .content_bottom .addManage > div input {
+  height: 40px;
+  background: #f5f5f5;
+  margin-left: 30px;
+  border-radius: 3px;
+  border: 1px #e6e6e6 solid;
+  padding: 12px 13px;
+  width: 300px;
+}
+.main_boby .content .content_bottom .addManage > div input:focus {
+  border: 1px #10d1a0 solid;
+  background: #ffffff;
+}
+.main_boby .content .content_bottom .addManage > div textarea {
+  min-height: 168px;
+  background: #f5f5f5;
+  margin-left: 30px;
+  border-radius: 3px;
+  border: 1px #e6e6e6 solid;
+  padding: 12px 13px;
+  width: 370px;
+}
+.main_boby .content .content_bottom .addManage > div textarea:focus {
+  border: 1px #10d1a0 solid;
+  background: #ffffff;
+}
+.main_boby .content .content_bottom .addManage > div.opera {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 142px;
+  margin-bottom: 40px;
+}
+.main_boby .content .content_bottom .addManage > div.opera button {
+  width: 170px;
+  height: 40px;
+  bottom: 0;
+  margin-top: 6px;
+  background: #10d1a0;
+  color: #ffffff;
+  font-size: 14px;
+  display: block;
+  border-radius: 5px;
+}
+.main_boby .content .content_bottom .addManage > div .unit {
+  margin-left: -34px;
+  color: #999999;
+}
+.main_boby .content .content_bottom .addManage > div > div {
+  width: 375px;
+  min-height: 40px;
+  display: inline-block;
+  margin-left: 30px;
+  position: relative;
+}
+.main_boby .content .content_bottom .addManage > div > div.task ul li {
+  font-size: 14px;
+  background: #f5f5f5;
+  color: #333333;
+  border: #e6e6e6 1px solid;
+  border-radius: 3px;
+  line-height: 40px;
+  height: 40px;
+  margin: 5px auto;
+  padding: 0 15px 0 15px;
+  position: relative;
+}
+.main_boby .content .content_bottom .addManage > div > div.task ul li>i{
+	position:absolute;
+	right: -30px;
+    top: 0px;
+}
+.main_boby .content .content_bottom .addManage > div > div.task ul li div span {
+  display: inline-block;
+}
+.main_boby .content .content_bottom .addManage > div > div.task ul li div span.units {
+  color: #ffae01;
+}
+.main_boby .content .content_bottom .addManage > div > div.task ul li div span:last-of-type {
+  float: right;
+}
+.main_boby .content .content_bottom .addManage > div > div.task ul li div span:first-of-type {
+  float: left;
+  width: 147px;
+}
+.main_boby .content .content_bottom .addManage > div > div.task ul li div span i {
+  font-size: 20px;
+  color: #10d1a0;
+  margin: auto 5px;
+}
+.main_boby .content .content_bottom .addManage > div > div.task_recipe ul li {
+  margin: 10px auto;
+  position: relative;
+}
+.main_boby .content .content_bottom .addManage > div > div.task_recipe ul li .recipe {
+  background: #f5f5f5;
+  min-height: 45px;
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+}
+.main_boby .content .content_bottom .addManage > div > div.task_recipe ul li .recipe h1 {
+  line-height: 45px;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 0 18px 0 18px;
+}
+.main_boby .content .content_bottom .addManage > div > div.task_recipe ul li .recipe h1 i {
+  font-weight: 300;
+  float: right;
+}
+.main_boby .content .content_bottom .addManage > div > div.task_recipe ul li .recipe .recipe_detials {
+  border-top: 1px solid #e6e6e6;
+  padding: 0 18px 0 18px;
+}
+.main_boby .content .content_bottom .addManage > div > div.task_recipe ul li .recipe .recipe_detials > .recipe_class {
+  padding: 5px 0 5px 0;
+}
+.main_boby .content .content_bottom .addManage > div > div.task_recipe ul li .recipe .recipe_detials > .recipe_class > div {
+  line-height: 32px;
+  display: inline-block;
+  font-size: 14px;
+}
+.main_boby .content .content_bottom .addManage > div > div.task_recipe ul li .recipe .recipe_detials > .recipe_class > div:first-of-type {
+  width: 50px;
+  color: #10cf9e;
+  vertical-align: top;
+}
+.main_boby .content .content_bottom .addManage > div > div.task_recipe ul li .recipe .recipe_detials > .recipe_class > div:last-of-type {
+  width: 280px;
+}
+.main_boby .content .content_bottom .addManage > div > div.task_recipe ul li .recipe .recipe_detials > .recipe_class > div:last-of-type p {
+  overflow: overlay;
+}
+.main_boby .content .content_bottom .addManage > div > div.task_recipe ul li .recipe .recipe_detials > .recipe_class > div:last-of-type p .iconfont {
+  color: #10cf9e;
+  float: right;
+  margin: auto 10px;
+  cursor: pointer;
+}
+.main_boby .content .content_bottom .addManage > div > div .edit_btn {
+  position: absolute;
+  left: 0px;
+  top: 6px;
+}
+.main_boby .content .content_bottom .addManage > div > div .goodAt {
+  width: 290px;
+  display: inline-block;
+}
+.main_boby .content .content_bottom .addManage > div > div .goodAt span {
+  line-height: 28px;
+  display: inline-block;
+  background: #10d1a0;
+  margin: auto 4px;
+  font-size: 12px;
+  color: #ffffff;
+  text-align: center;
+  padding-right: 14px;
+  padding-left: 14px;
+  border-right: #10d1a0 solid 23px;
+  position: relative;
+  margin-top: 8px;
+}
+.main_boby .content .content_bottom .addManage > div > div .goodAt span img {
+  position: absolute;
+  right: -22px;
+  top: 1px;
+}
+.main_boby .content .content_bottom .addManage > div > div button {
+  line-height: 30px;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 14px;
+  color: #10cf9e;
+  border: 1px #10cf9e solid;
+  background: #ffffff;
+  border-radius: 3px;
+}
+.mask_add,
+.exercise_add,
+.addRecipe {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.36);
+  display: none;
+  position: absolute;
+  top: 0;
+}
+.props {
+  width: 356px;
+  min-height: 200px;
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+}
+.props h1 {
+  line-height: 48px;
+  text-align: center;
+  color: #10cf9e;
+  font-size: 20px;
+  border-bottom: #e6e6e6 1px solid;
+}
+.props .choose {
+  margin: 6px auto;
+  padding-left: 35px;
+  padding-right: 35px;
+  margin-top: 16px;
+}
+.props .choose .dropdown {
+  width: 220px;
+  margin-left: 10px;
+}
+.props .choose .food_type {
+  width: 188px;
+}
+.props .chooser_box > ul {
+  display: none;
+}
+.props .chooser_box > ul.on {
+  display: block;
+}
+.props .chooser_box > ul li {
+  margin: 6px auto;
+  padding-left: 35px;
+  padding-right: 35px;
+  position: relative;
+  color: #999999;
+}
+.props .chooser_box > ul li.modification {
+  color: #333333;
+}
+.props .chooser_box > ul li.goal input {
+  width: 188px;
+}
+.props .chooser_box > ul li .units_type {
+  width: 188px;
+  margin-left: 10px;
+}
+.props .chooser_box > ul li input {
+  height: 40px;
+  background: #f5f5f5;
+  margin-left: 10px;
+  border-radius: 3px;
+  border: 1px #e6e6e6 solid;
+  padding: 12px 13px;
+  width: 220px;
+}
+.props .chooser_box > ul li .unit {
+  margin-left: -34px;
+  color: #999999;
+  position: absolute;
+  right: 50px;
+  top: 12px;
+}
+.props .operation {
+  height: 50px;
+  width: 100%;
+  border-top: 1px solid #e6e6e6;
+  text-align: center;
+}
+.props .operation span {
+  width: 48%;
+  text-align: center;
+  display: inline-block;
+  line-height: 50px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.props .operation span.confirm,
+.props .operation span.amend {
+  color: #10cf9e;
+  border-left: 1px solid #e6e6e6;
+}
+.icon-jian1 {
+  position: absolute;
+  right: -30px;
+  top: 14px;
+}
+.iconfont {
+  cursor: pointer;
+}

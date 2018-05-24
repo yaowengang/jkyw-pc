@@ -1,0 +1,103 @@
+body {
+    width: 100%;
+    display: block;
+}
+
+body .sidebar {
+    float: left;
+    width: 336px;
+    height: 100%;
+    background: #10d1a0;
+}
+
+body .sidebar .userImg {
+    text-align: center;
+    padding-top: 24px;
+    margin-bottom: 36px;
+}
+
+body .sidebar .userImg img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+body .sidebar .userImg p {
+    color: #ebfffa;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 50px;
+}
+
+body .sidebar .menu dl {
+    cursor: pointer;
+}
+
+body .sidebar .menu dl dt {
+    color: #b5f9e8;
+    font-weight: bold;
+    font-size: 20px;
+    padding-left: 40px;
+    line-height: 60px;
+}
+
+body .sidebar .menu dl dt i {
+    font-size: 20px;
+    margin: auto 6px;
+    font-weight: 300;
+}
+
+body .sidebar .menu dl dt .state {
+    float: right;
+    margin-right: 40px;
+}
+
+body .sidebar .menu dl dd {
+    display: none;
+}
+
+body .sidebar .menu dl dd a {
+    color: #b5f9e8;
+    font-size: 18px;
+}
+
+body .sidebar .menu dl.active dt {
+    color: #ffffff;
+}
+
+body .sidebar .menu dl.active dd {
+    display: block;
+    height: 50px;
+    width: 100%;
+    color: #b5f9e8;
+    font-size: 18px;
+    line-height: 50px;
+    padding-left: 90px;
+}
+
+body .sidebar .menu dl.active dd.active {
+    color: #ffffff;
+    font-weight: bold;
+    background: #0fc596;
+    border-left: #ffffff 3px solid;
+}
+
+body .main_boby {
+    height: 100%;
+    display: inline-block;
+}
+
+body .main_boby .title {
+    padding: 18px 216px 16px 92px;
+    width: 100%;
+    height: 84px;
+    box-shadow: 3px 3px 6px #d4d4d4;
+}
+
+body .main_boby .title .logo1 {
+    float: left;
+}
+
+body .main_boby .title .logo2 {
+    float: right;
+}

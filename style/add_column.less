@@ -1,0 +1,285 @@
+.main_boby{
+  .content{
+    height: 160px;
+    width: 100%;
+    display: block;
+    .content_top{
+      height: 160px;      
+      border-bottom: 1px solid #e6e6e6;          
+      h1{
+        line-height: 92px;
+        padding-left: 88px;
+        font-size: 30px;
+        font-weight: bold;
+        color: #666666;
+    
+      }
+      div{
+        padding-left: 88px;
+        button{
+          border: solid 1px #666666;
+          background: #ffffff;
+          height:50px;
+          width: 180px;
+          text-align: center;
+          line-height: 50px;
+          color: #666666;
+          border-radius: 3px;
+          margin: 0 4px;
+          font-size: 20px;
+          &.active{
+            color: #10d1a0;
+            background: #10d1a0;
+            color: #ffffff;
+            border: none;
+            font-weight: bold;
+          }     
+        }
+      }
+    }
+    .content_bottom{
+      .add_colunm{
+        width: 900px;
+        margin: auto;
+        >div{
+          margin-top: 20px;
+          label{
+            width: 70px;
+            color: #999999;
+            font-size: 14px;
+            display: inline-block;
+            text-align: right;
+            line-height: 44px;
+            vertical-align: top;
+            &.mandatory{
+              position: relative;
+              &::after{
+                content:"*";
+                position: absolute;
+                line-height:20px;
+                display: inline-block;
+                width: 8px;
+                text-align: center;
+                color: #ff3300;
+                top: 16px;
+                right: -12px;
+              }
+            }                       
+          }
+          &>input{
+            height: 40px;
+            background: #f5f5f5;
+            margin-left: 22px;
+            border-radius: 3px;
+            border: 1px #e6e6e6 solid;
+            padding: 12px 13px;
+            width:805px;
+            &:focus{
+              border: 1px #10d1a0 solid;
+            }                             
+          }
+          &>textarea {
+            margin-left: 20px;
+            width: 805px;
+            height: 90px;
+            background: #f5f5f5;
+            border-radius: 3px;
+            border: 1px #e6e6e6 solid;
+            padding: 15px 10px;
+            &:focus{
+              border: 1px #10d1a0 solid;
+            }             
+          }
+          .uploadVideo{
+            border: 1px #e6e6e6 solid;
+            width: 805px;
+            margin-left: 20px;
+            min-height:  300px;     
+            border-radius: 3px;
+            display:inline-flex;
+            align-items:center; 
+            text-align: center;
+            position: relative;
+            .progress{
+              height: 6px;
+              width: 100%;
+              background: #ededed;
+              position: absolute;
+              bottom: 0;
+              display: none;              
+              .bar{
+                height: 6px;
+                border-radius: 3px;
+                width: 30%;
+                background: #10d1a0;
+                position: absolute;
+
+                span{
+                  position: absolute;
+                  right: 0;
+                  top: 10px;
+                  
+                }
+              }  
+            }
+            .shangchuan{
+              display: none;                                                                                                                                                                 
+            }
+            .videos{
+              display: none;
+            }            
+            .shangchuanzhong{
+              display: none;
+            }
+            &.shangchuan_box{
+            .shangchuan{
+              width: 500px;
+              height: 60px;
+              border:2px #d9d9d9 dashed;
+              background: #ffffff;
+              margin: auto;
+              color: #666666;
+              display: block;
+              font-size: 20px;
+              position: relative;
+              i{
+                font-size: 30px;
+                line-height: 60px;
+                color: #666666;
+                margin: auto 20px;
+              }
+              input[type='file']{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                left: 0;
+                opacity: 0;
+              }
+            }
+            }
+            &.shibai_box{
+              .progress{
+                display: block;
+                .bar{
+                  height: 6px;
+                  border-radius: 3px;
+                  width: 100%;
+                  background: #ff9074;
+                  position: absolute;
+                  span{
+                    position: absolute;
+                    top: 10px;
+                    text-align: center;
+                    width: 100%;
+                  }
+                }                
+              }              
+              .shangchuan{
+                display: block;                
+                width: 500px;
+                height: 60px;
+                border:2px #d9d9d9 dashed;
+                background: #ffffff;
+                margin: auto;
+                color: #666666;
+                font-size: 20px;
+                position: relative;
+                i{
+                  font-size: 30px;
+                  line-height: 60px;
+                  color: #666666;
+                  margin: auto 20px;
+                }
+                input[type='file']{
+                  width: 100%;
+                  height: 100%;
+                  position: absolute;
+                  left: 0;
+                  opacity: 0;
+                }
+              }
+              .shangchuanzhong{
+                display: none;
+              }
+            }            
+            &.shangchuanzhong_box{
+              .progress{
+                display: block;
+                .bar{
+                  height: 6px;
+                  border-radius: 3px;
+                  width: 30%;
+                  background: #10d1a0;
+                  position: absolute;
+                  span{
+                    position: absolute;
+                    right: 0;
+                    top: 10px;
+                    
+                  }
+                }                
+              }
+
+            .shangchuanzhong{
+              display: block;
+              margin: auto;
+              color: #666666;
+              i{
+                font-size: 30px;
+                line-height: 60px;
+                color: #666666;
+                margin: auto 20px;
+                             
+              }
+            }
+            }
+            &.chenggong_box{
+              border:none;
+              .videos{
+                display: block;
+                background: black;
+                position: relative;
+                .video_play_num {
+                  height: 100%;
+                  width: 100%;
+                  position: absolute;
+                  background: rgba(0, 0, 0, 0.3);
+                  text-align: center;
+                  z-index: 10;
+                  .icon{
+                    font-size: 6.6rem;
+                    color: #fff;
+                    display: inline-block;
+                    margin-top: 5.8rem;
+                    position: initial;
+                    top: 2rem;
+                    left: 1.5rem;
+                    z-index: 19;                                      
+                  }                  
+                }                
+              }
+            }
+
+          }
+
+        }
+      }
+      .operatingArea{
+        margin-top: 30px;
+        text-align: center;
+        button{
+          border: none;
+          background: #10d1a0;
+          height:50px;
+          width: 180px;
+          text-align: center;
+          line-height: 50px;
+          color: #ffffff;
+          border-radius: 3px;
+          margin: 0 4px;
+          font-size: 20px;
+        }     
+      }
+    }
+  }
+}

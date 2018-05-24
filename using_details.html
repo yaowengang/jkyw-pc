@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/common.css">
+    <link rel="stylesheet" href="style/select.css">
+    <link rel="stylesheet" href="style/using_details.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_420278_ff6suhdpderyhkt9.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/select.js"></script>
+    <script type="text/javascript" src="js/echarts.js"></script>
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="userImg">
+            <img src="images/userimage.png" alt="">
+            <p>陈独秀</p>
+        </div>
+        <div class="menu">
+            <dl>
+                <dt><i class="iconfont icon-gongzuotai"></i>工作台</i></dt>
+            </dl>
+            <dl class="active">
+                <dt><i class="iconfont icon-ffuwu"></i>医师管理服务<i class="iconfont icon-chevron state"></i></dt>
+                <dd><a href="ServiceList.html">服务列表</a></dd>
+                <dd class="active"><a href="addServic.html">新增服务</a></dd>
+                <dd><a href="##">查看服务使用用户</a></dd>
+            </dl>
+            <dl>
+                <dt><i class="iconfont icon-fangan"></i>医师方案管理<i class="iconfont icon-jiantou state"></i></dt>
+                <dd><a href="##">服务列表</a></dd>
+                <dd><a href="##">新增服务</a></dd>
+                <dd><a href="##">查看服务使用用户</a></dd>
+            </dl>
+            <dl>
+                <dt><i class="iconfont icon-pinggu"></i>医师评估管理<i class="iconfont icon-jiantou state"></i></dt>
+                <dd><a href="##">服务列表</a></dd>
+                <dd><a href="##">新增服务</a></dd>
+                <dd><a href="##">查看服务使用用户</a></dd>
+            </dl>
+            <dl>
+                <dt><i class="iconfont icon-zhuanlan"></i>医师专栏管理<i class="iconfont icon-jiantou state"></i></dt>
+                <dd><a href="##">服务列表</a></dd>
+                <dd><a href="##">新增服务</a></dd>
+                <dd><a href="##">查看服务使用用户</a></dd>
+            </dl>
+            <dl>
+                <dt><i class="iconfont icon-wenda"></i>医师问答管理<i class="iconfont icon-jiantou state"></i></dt>
+                <dd><a href="##">服务列表</a></dd>
+                <dd><a href="##">新增服务</a></dd>
+                <dd><a href="##">查看服务使用用户</a></dd>
+            </dl>
+            <dl>
+                <dt><i class="iconfont icon-xiaoxi1"></i>康信<i class="iconfont icon-jiantou state"></i></dt>
+                <dd><a href="##">服务列表</a></dd>
+                <dd><a href="##">新增服务</a></dd>
+                <dd><a href="##">查看服务使用用户</a></dd>
+            </dl>
+        </div>
+    </div>
+    <div class="main_boby">
+        <div class="title">
+            <img src="images/common_logo.png" alt="" class="logo1">
+            <img src="images/common_down.png" alt="" class="logo2">
+        </div>
+        <div class="content">
+            <div class="content_top">
+                <div class="returnSuperior">
+                    <a href="javascript:history.go(-1)">
+                        &lt;&lt;返回上一级 </a>
+                </div>
+                <div class="using_data">
+                    <div class="image_data">
+                        <div class="image_box"><img src="images/avatar.png" alt=""></div>
+                        <div class="con_box">
+                            <p>
+                                <span class="name">徐楠</span>
+                                <span>女</span>
+                                <span>35岁</span>
+                            </p>
+                            <p>
+                                <label>一对一定制</label>
+                            </p>
+                        </div>
+                        <button>调整方案</button>
+                    </div>
+                    <div class="usedata">
+                        <div class="progress">
+                            <div class="course">
+                                <span>进度30%</span>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>
+                                <i class="iconfont icon-duigou--"></i>
+                                <span>周二</span>
+                            </li>
+                            <li>
+                                <i class="iconfont icon-duigou--"></i>
+                                <span>周二</span>
+                            </li>
+                            <li>
+                                <i class="iconfont icon-gantanhao--"></i>
+                                <span>周二</span>
+                            </li>
+                            <li>
+                                <i class="iconfont icon-duigou--"></i>
+                                <span>周二</span>
+                            </li>
+                            <li>
+                                <i class="iconfont icon-jianhao-"></i>
+                                <span>周二</span>
+                            </li>
+                            <li>
+                                <i class="iconfont icon-jianhao-"></i>
+                                <span>周二</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="content_bottom">
+                <div class="nav_box">
+                    <div class="text">
+                        今日健康数据
+                    </div>
+                    <div class="date">
+                        <select class="date_select">
+                            <option value="本月">本月</option>
+                            <option value="本周">本周</option>
+                        </select>
+                    </div>
+                    <nav>
+                        <span class="active">血压</span>
+                        <span>血糖</span>
+                        <span>呼吸</span>
+                        <span>心率</span>
+                        <span>体重</span>
+                    </nav>
+                </div>
+                <div class="switchover">
+                    <button class="lastMonth">上一月</button>
+                    <button class="firstMonth">下一月</button>
+                </div>
+                <div id="container" style="width: 1300px;height:500px;"></div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+</body>
+<script>
+    /*
+     *设置高度
+     */
+    var bheight = $(document).height();
+    $("body").css("height", bheight);
+    /*
+     *左侧开关
+     */
+    $(".menu dl dt").click(function() {
+        console.log($(this).hasClass('active'))
+        var dl = $(this).parent('dl');
+        if (dl.hasClass('active')) {
+            dl.removeClass('active');
+            dl.find('.state').removeClass('icon-chevron').addClass('icon-jiantou');
+        } else {
+            dl.addClass('active').siblings().removeClass('active');
+            dl.find('.state').removeClass('icon-jiantou').addClass('icon-chevron');
+            dl.siblings().find('.state').removeClass('icon-chevron').addClass('icon-jiantou');
+        }
+    });
+
+
+    $("nav span").click(function() {
+        switch (($(this).text())) {
+            case '血压':
+
+                break;
+            case '血糖':
+
+                break;
+            case '呼吸':
+
+                break;
+            case '心率':
+
+                break;
+            case '体重':
+
+                break;
+            default:
+                break;
+        }
+
+        $(this).addClass("active").siblings().removeClass("active")
+    })
+    $(".switchover").on('click', 'lastMonth', function() {
+
+    })
+    $(".switchover").on('click', 'firstMonth', function() {
+
+    })
+    $(".switchover").on('click', 'lastweek', function() {
+
+    })
+    $(".switchover").on('click', 'firstweek', function() {
+
+    })
+
+    var dom = document.getElementById("container");
+    var myChart = echarts.init(dom);
+    var app = {};
+    var week = ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+    var month = ['3.1', '3.2', '3.3', '3.4', '3.5', '3.6', '3.7', '3.8', '3.9', '3.10', '3.11', '3.11', '3.13', '3.14', '3.15', '3.16', '3.17', '3.18', '3.19', '3.20', '3.21', '3.22', '3.23', '3.24', '3.25', '3.26', '3.27', '3.28', '3.29', '3.30', '3.31']
+    var dataType = month;
+    var detail = [{
+        symbol: 'circle',
+        name: '收缩压',
+        type: 'line',
+        color: "#10d1a0",
+        data: [121, 113, 101, 112, 90, 100, 90]
+    }, {
+        symbol: 'circle',
+        name: '舒张压',
+        type: 'line',
+        color: '#64e07b',
+        data: [38, 48, 50, 60, 45, 70, 60]
+    }];
+    var text = '单位：mmHg'
+    option = null;
+    option = {
+        title: {
+            text: text,
+            textStyle: {
+                fontSize: 16
+            },
+            left: "18%",
+            top: "5%"
+        },
+        tooltip: {
+            trigger: 'axis'
+        },
+        legend: {
+            data: [{
+                name: '收缩压',
+                icon: 'circle'
+            }, {
+                name: '舒张压',
+                icon: 'circle'
+            }, {
+                name: '餐后最高',
+                icon: 'circle'
+            }, {
+                name: '空值',
+                icon: 'circle'
+            }],
+            left: "5%",
+            top: "5%"
+
+        },
+        grid: {
+            left: '3%',
+            right: '10%',
+            bottom: '3%',
+            containLabel: true,
+            show: true
+        },
+        xAxis: {
+            type: 'category',
+            boundaryGap: false,
+            offset: 0,
+            axisLine: {
+                lineStyle: {
+                    color: '#bbbbbb'
+                }
+            },
+            axisTick: {
+                show: false
+            },
+            splitLine: {
+                show: true
+            },
+            data: dataType
+        },
+        yAxis: {
+            type: 'value',
+            axisTick: {
+                show: false
+            },
+            axisLine: {
+                lineStyle: {
+                    color: '#bbbbbb'
+                }
+            },
+            scale: false
+        },
+        series: detail
+    };;
+    if (option && typeof option === "object") {
+        myChart.setOption(option, true);
+    }
+    $(".date_select").change(function() {
+        var swHtml = '';
+        if ($(this).val() == "本月") {
+            swHtml = '<button class="lastMonth">上一月</button><button class="firstMonth">下一月</button>'
+            dataType = month;
+            myChart.setOption({
+                xAxis: {
+                    data: dataType
+                }
+            });
+
+        } else if ($(this).val() == "本周") {
+            swHtml = '<button class="lastweek">上一周</button><button class="firstweek">下一周</button>'
+            dataType = week;
+            myChart.setOption({
+                xAxis: {
+                    data: dataType
+                }
+            });
+
+        }
+        $(".switchover").html(swHtml)
+    });
+</script>
+
+</html>

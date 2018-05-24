@@ -1,0 +1,172 @@
+.main_boby{
+  .content{
+
+    h1{
+      font-size: 28px;
+      padding-left: 90px;
+      line-height: 85px;
+      color: #666666;
+    }
+    .recharge{
+      width: 600px;
+      height: 630px;
+      text-align: center;
+      margin: auto;
+      position: relative;      
+      >p{
+        font-size: 20px;
+        font-weight: bold;
+        color: #666666;
+      }
+      ul{
+        li{
+          width: 180px;
+          height: 88px;
+          color: #10d1a0;
+          font-size: 18px;
+          margin: 10px;
+          float: left;
+          background: #ffffff;
+          border: 1px #10d1a0 solid;
+          border-radius: 3px;
+          display: flex;
+          align-items:center;
+          &.active{
+            background: #10d1a0;
+            color: #ffffff;
+            border: none;
+          }
+          div{
+            width: 100%;
+            text-align: center;
+          >p{
+            line-height: 30px;
+            display: block;       
+          }
+        }
+        }
+      }
+      .channel{
+        float: left;
+        margin-left: 22px;
+        width: 156px;
+        margin-top: 50px;
+        p{
+          display: block;
+          position: relative;
+          line-height: 30px; 
+          font-size: 16px;
+          color: #333333;
+          margin: 14px auto;    
+          input[type="radio"] {
+            width: 30px;
+            height: 30px;
+            opacity: 0;
+          }
+          label {
+          position: absolute;
+          left: 5px;
+          top: 3px;
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          border: 1px solid #999;
+          }
+          input:checked+label { 
+            background-color: #10d1a0;
+            border: 1px solid #10d1a0;
+          }
+          input:checked+label::after {
+            position: absolute;
+            content: "";
+            width: 11px;
+            height: 19px;
+            top: -2px;
+            left: 6px;
+            border: 4px solid #fff;
+            border-top: none;
+            border-left: none;
+            transform: rotate(45deg);
+          }
+          .iconfont{
+            font-size: 30px;
+            margin:auto 20px;
+            &.icon-zhifubao{
+              color: #00a7ec;
+            }
+            &.icon-weixin{
+              color: #02c75a;
+            }            
+          }
+          button{
+            border: none;
+            background: #10d1a0;
+            height: 30px;
+            width: 110px;
+            text-align: center;
+            line-height: 30px;
+            color: #ffffff;
+            border-radius: 5px;
+            margin: 0 4px;
+            font-size: 14px;
+            float: right; 
+          }              
+
+        }
+        input[type='text']{
+        height: 40px;
+        background: #f5f5f5;
+        border-radius: 3px;
+        border: 1px #e6e6e6 solid;
+        padding: 12px 13px;
+        width: 380px;          
+        }
+        .tips{
+          color: #10d1a0;
+          line-height: 40px;
+          font-size: 14px;
+          label{
+            margin: auto 10px;
+          }
+        }
+        .tips2{
+          color: #999999;
+          margin-top: 40px;
+          font-size: 12px;
+        }
+        >button{
+          border: none;
+          background: #10d1a0;
+          height: 40px;
+          width: 385px;
+          text-align: center;
+          line-height: 40px;
+          color: #ffffff;
+          border-radius: 3px;
+          margin: 0 4px;
+          font-size: 14px;
+          margin-top:128px;      
+        }          
+      }
+      .qrCode{
+        width: 300px;
+        height: 320px;
+        border-radius: 5px;
+        border: 1px solid #e6e6e6;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        p{
+          font-size: 14px;
+          line-height: 48px;
+          color: #666666;
+          text-align: center;
+        }
+        img{
+          width: 250px;
+          height: 250px;
+        }
+      }
+    }
+  }
+}

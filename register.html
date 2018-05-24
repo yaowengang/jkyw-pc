@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/index.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+    <div class="main">
+
+        <div class="maincon registercon">
+            <div class="logocon">
+                <img src="images/logo_con.png" alt="">
+            </div>
+            <div class="mainlogo">
+                <img src="images/logo.png" alt="logo" class="logoimg">
+            </div>
+            <div class="connav">
+                <h1>注 册</h1>
+                <div class="user">
+                    <input type="text" placeholder="请输入手机号码">
+                    <label></label>
+                </div>
+                <div class="password"><input type="text" placeholder="请输入验证码" class="password" maxlength="6"><label></label></div>
+                <div class="password"><input type="password" placeholder="请输入密码" class="password passwordegOne"><label></label></div>
+                <div class="password"><input type="password" placeholder="请再次确认密码" class="password"><label></label></div>
+                <div class="userProtocol">
+                    <input type="checkbox" name="" id=""> 我已同意并阅读
+                    <a href="##">《用户协议》</a>
+                </div>
+
+                <button class="registerBtn">注 册</button>
+                <div class="loginFunction">
+                    <a href="index.html" class="loginHerf">已有账号, 直接登录</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <a class="dowloadHerf" href="##"><img src="images/downLoad.png" alt=""></a>
+</body>
+<script>
+    $('body').on('focus', 'input[placeholder]', function() {
+        var valueBak = $(this).attr('xplaceholder');
+        if (!valueBak) {
+            $(this).attr('xplaceholder', $(this).attr('placeholder'));
+        }
+        $(this).attr('placeholder', '');
+    }).on('blur', 'input[placeholder]', function() {
+        $(this).attr('placeholder', $(this).attr('xplaceholder'));
+    });
+    $('input').blur(function() {
+        var valueBak = $(this).attr('xplaceholder');
+        var myreg = /^[1][3,4,5,7,8][0-9]{9}$/;
+        var passwordeg = /^(\w){6,15}$/;
+        console.log(valueBak);
+        switch (valueBak) {
+            case "请输入手机号码":
+                if (!myreg.test($(this).val())) {
+                    $(this).parent().addClass('error');
+                    $(this).next("label").text('请输入正确的手机号码！');
+                } else {
+                    $(this).parent().removeClass('error');
+                    $(this).next("label").text('');
+                }
+                break;
+            case "请输入验证码":
+                break;
+            case "请输入密码":
+                if (!passwordeg.test($(this).val())) {
+                    $(this).parent().addClass('error');
+                    $(this).next("label").text('请输入6-16位的密码！');
+                } else {
+                    $(this).parent().removeClass('error');
+                    $(this).next("label").text('');
+                }
+                break;
+            case "请再次确认密码":
+                if ($(this).val() !== $('.passwordegOne').val()) {
+                    $(this).parent().addClass('error');
+                    $(this).next("label").text('两次输入的密码不一致');
+                } else {
+                    $(this).parent().removeClass('error');
+                    $(this).next("label").text('');
+                }
+                break;
+            default:
+                break;
+        }
+
+    })
+</script>
+
+</html>

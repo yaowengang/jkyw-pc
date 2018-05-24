@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/common.css">
+    <link rel="stylesheet" href="style/add_column.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_420278_47tqol0l5ix561or.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="style/select.css">
+    <link rel="stylesheet" href="style/priceAndtype.css">
+    <style>
+        .dropdown {
+            width: 297px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="userImg">
+            <img src="images/userimage.png" alt="">
+            <p>陈独秀</p>
+        </div>
+        <div class="menu">
+            <dl>
+                <dt><i class="iconfont icon-gongzuotai"></i>工作台</i></dt>
+            </dl>
+            <dl class="active">
+                <dt><i class="iconfont icon-ffuwu"></i>医师管理服务<i class="iconfont icon-chevron state"></i></dt>
+                <dd><a href="ServiceList.html">服务列表</a></dd>
+                <dd class="active"><a href="addServic.html">新增服务</a></dd>
+                <dd><a href="##">查看服务使用用户</a></dd>
+            </dl>
+            <dl>
+                <dt><i class="iconfont icon-fangan"></i>医师方案管理<i class="iconfont icon-jiantou state"></i></dt>
+                <dd><a href="##">服务列表</a></dd>
+                <dd><a href="##">新增服务</a></dd>
+                <dd><a href="##">查看服务使用用户</a></dd>
+            </dl>
+            <dl>
+                <dt><i class="iconfont icon-pinggu"></i>医师评估管理<i class="iconfont icon-jiantou state"></i></dt>
+                <dd><a href="##">服务列表</a></dd>
+                <dd><a href="##">新增服务</a></dd>
+                <dd><a href="##">查看服务使用用户</a></dd>
+            </dl>
+            <dl>
+                <dt><i class="iconfont icon-zhuanlan"></i>医师专栏管理<i class="iconfont icon-jiantou state"></i></dt>
+                <dd><a href="##">服务列表</a></dd>
+                <dd><a href="##">新增服务</a></dd>
+                <dd><a href="##">查看服务使用用户</a></dd>
+            </dl>
+            <dl>
+                <dt><i class="iconfont icon-wenda"></i>医师问答管理<i class="iconfont icon-jiantou state"></i></dt>
+                <dd><a href="##">服务列表</a></dd>
+                <dd><a href="##">新增服务</a></dd>
+                <dd><a href="##">查看服务使用用户</a></dd>
+            </dl>
+            <dl>
+                <dt><i class="iconfont icon-xiaoxi1"></i>康信<i class="iconfont icon-jiantou state"></i></dt>
+                <dd><a href="##">服务列表</a></dd>
+                <dd><a href="##">新增服务</a></dd>
+                <dd><a href="##">查看服务使用用户</a></dd>
+            </dl>
+        </div>
+    </div>
+    <div class="main_boby">
+        <div class="title">
+            <img src="images/common_logo.png" alt="" class="logo1">
+            <img src="images/common_down.png" alt="" class="logo2">
+        </div>
+        <div class="content">
+            <div class="content_top">
+                <h1>新增专栏</h1>
+                <div>
+                    <button>图文类</button>
+                    <button class="active">视频类</button>
+                </div>
+            </div>
+            <div class="content_bottom">
+                <div class="add_colunm">
+                    <div><label class="mandatory">文章标题</label><input type="text" placeholder="请输入文章标题"></div>
+                    <div><label class="mandatory">文章简介</label>
+                        <textarea type="text" placeholder="请输入文章简介..."></textarea>
+                    </div>
+                    <div>
+                        <label class="mandatory">上传视频</label>
+                        <div class="uploadVideo shibai_box">
+                            <div class="shangchuan"><i class="iconfont icon-shangchuan"></i>点击上传
+                                <input type="file" name="" id="">
+                            </div>
+                            <div class="shangchuanzhong">
+                                <i class="iconfont icon-shangchuanzhong"></i>
+                                <p>上传中...</p>
+                            </div>
+                            <div class="progress">
+                                <div class="bar"><span>上传失败，请重新上传</span></div>
+                            </div>
+                            <div class="videos">
+                                <div class="video_play_num"><i class="icon iconfont icon-play1 video_play"></i></div>
+                                <video src="http://tb-video.bdstatic.com/tieba-smallvideo-transcode/4557423_ca0345a128e9515c54697c037e65fada_3.mp4" width="480" height="300" class="video_paused"></video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="operatingArea">
+                    <button>直接发布</button>
+                    <button>存为草稿</button>
+                    <button>取消</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+</body>
+<script src="js/select.js"></script>
+<script>
+    var bheight = $(document).height();
+    $("body").css("height", bheight);
+    $(".menu dl dt").click(function() {
+        console.log($(this).hasClass('active'))
+        var dl = $(this).parent('dl');
+        if (dl.hasClass('active')) {
+            dl.removeClass('active');
+            dl.find('.state').removeClass('icon-chevron').addClass('icon-jiantou');
+        } else {
+            dl.addClass('active').siblings().removeClass('active');
+            dl.find('.state').removeClass('icon-jiantou').addClass('icon-chevron');
+            dl.siblings().find('.state').removeClass('icon-chevron').addClass('icon-jiantou');
+        }
+    });
+    /*
+     *视频播放
+     */
+    for (var i = 0; i < $('.videos').length; i++) {
+        (function(i) {
+            document.getElementsByClassName('video_play')[i].onclick = function() {
+                for (var n = 0; n < $('.video_con').length; n++) {
+                    document.getElementsByClassName('video_paused')[n].pause()
+                    $('.video_play_num').fadeIn(100)
+                }
+                document.getElementsByClassName('video_paused')[i].play()
+                $(this).parent().fadeOut(100)
+            }
+            document.getElementsByClassName('video_paused')[i].onclick = function() {
+                document.getElementsByClassName('video_paused')[i].pause()
+                $(this).prev().fadeIn(100)
+            }
+            document.getElementsByClassName('video_paused')[i].addEventListener('ended', function() {
+                $('.video_play_num').fadeIn(100)
+            })
+        })(i)
+    }
+
+    $(".confirm").click(function() {
+        $(".mask").fadeOut();
+    })
+</script>
+
+</html>

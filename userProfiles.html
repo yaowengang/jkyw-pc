@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/userprop.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_420278_ff6suhdpderyhkt9.css">
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+    <div class="userPro">
+        <div class="prop">
+            <div class="mask_close iconfont icon-guanbi close"></div>
+            <div class="propCon">
+                <h2>查看档案</h2>
+                <div class='picture_list'>
+                    <div class="picture p3">
+                        <div class="pictureCon">缺血性心血管风险萨的痕迹</div>
+                        <div class="pictureleavl">轻度</div>
+                    </div>
+                </div>
+                <ul class="userDetail">
+                    <li>
+                        <label>姓名</label>
+                        <span>张三</span>
+                    </li>
+                    <li>
+                        <label>性别</label>
+                        <span>男</span>
+                    </li>
+                    <li>
+                        <label>出生地</label>
+                        <span>陕西西安</span>
+                    </li>
+                    <li>
+                        <label>身份证</label>
+                        <span>610125198803124852</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var bheight = $(document).height();
+    $("body").css("height", bheight);
+    $(".mask_close").click(function() {
+        $(".userPro").fadeOut();
+    })
+    $(function() {
+        var pictureNum = $(".picture").length;
+        var pictureList = $(".picture");
+        var picturepostion = []
+        console.log(pictureList)
+        switch (pictureNum) {
+            case 6:
+                picturepostion = [{
+                    "top": "0",
+                    "left": "5%"
+                }, {
+                    "top": "0",
+                    "left": "38%"
+                }, {
+                    "top": "0",
+                    "left": "70%"
+                }, {
+                    "top": "40%",
+                    "left": "1%"
+                }, {
+                    "top": "40%",
+                    "left": "28%"
+                }, {
+                    "top": "40%",
+                    "left": "58%"
+                }]
+                break;
+            case 5:
+                picturepostion = [{
+                    "top": "0",
+                    "left": "5%"
+                }, {
+                    "top": "0",
+                    "left": "38%"
+                }, {
+                    "top": "0",
+                    "left": "70%"
+                }, {
+                    "top": "33%",
+                    "left": "22%"
+                }, {
+                    "top": "33%",
+                    "left": "54%"
+                }]
+                break;
+            case 4:
+                picturepostion = [{
+                    "top": "0",
+                    "left": "5%"
+                }, {
+                    "top": "0",
+                    "left": "38%"
+                }, {
+                    "top": "30%",
+                    "left": "55%"
+                }, {
+                    "top": "33%",
+                    "left": "22%"
+                }]
+                break;
+            case 3:
+                picturepostion = [{
+                    "top": "33%",
+                    "left": "5%"
+                }, {
+                    "top": "16%",
+                    "left": "38%"
+                }, {
+                    "top": "30%",
+                    "left": "65%"
+                }]
+                break;
+            case 2:
+                picturepostion = [{
+                    "top": "33%",
+                    "left": "17%"
+                }, {
+                    "top": "16%",
+                    "left": "62%"
+                }]
+                break;
+            case 1:
+                picturepostion = [{
+                    "top": "21%",
+                    "left": "24%"
+                }]
+                break;
+            default:
+                break;
+        }
+        pictureList.each(function(e) {
+            console.log(picturepostion)
+
+            var css = picturepostion[e]
+            $(this).css(css)
+        })
+    });
+</script>
+
+</html>

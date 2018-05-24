@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/reset.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+
+</head>
+
+<body>
+
+    <div id="sjld" style="width:520px;margin:40px auto;position:relative;">
+
+        <div class="m_zlxg" id="shenfen">
+
+            <p title="">选择省份</p>
+
+            <div class="m_zlxg2">
+
+                <ul></ul>
+
+            </div>
+
+        </div>
+
+        <div class="m_zlxg" id="chengshi">
+
+            <p title="">选择城市</p>
+
+            <div class="m_zlxg2">
+
+                <ul></ul>
+
+            </div>
+
+        </div>
+
+        <div class="m_zlxg" id="quyu">
+
+            <p title="">选择区域</p>
+
+            <div class="m_zlxg2">
+
+                <ul></ul>
+
+            </div>
+
+        </div>
+
+        <input id="sfdq_num" type="hidden" value="" />
+
+        <input id="csdq_num" type="hidden" value="" />
+
+        <input id="sfdq_tj" type="hidden" value="" />
+
+        <input id="csdq_tj" type="hidden" value="" />
+
+        <input id="qydq_tj" type="hidden" value="" />
+
+    </div>
+    <script type="text/javascript" src="js/address.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $("#sjld").sjld("#shenfen", "#chengshi", "#quyu");
+
+        });
+    </script>

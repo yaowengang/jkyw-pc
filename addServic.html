@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/common.css">
+    <link rel="stylesheet" href="style/addservic.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_420278_ff6suhdpderyhkt9.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="userImg">
+            <img src="images/userimage.png" alt="">
+            <p>陈独秀</p>
+        </div>
+        <div class="menu">
+            <dl>
+                <dt><i class="iconfont icon-gongzuotai"></i>工作台</i></dt>
+            </dl>
+            <dl class="active">
+                <dt><i class="iconfont icon-ffuwu"></i>医师管理服务<i class="iconfont icon-chevron state"></i></dt>
+                <dd><a href="ServiceList.html">服务列表</a></dd>
+                <dd class="active"><a href="addServic.html">新增服务</a></dd>
+                <dd><a href="##">查看服务使用用户</a></dd>
+            </dl>
+            <dl>
+                <dt><i class="iconfont icon-fangan"></i>医师方案管理<i class="iconfont icon-jiantou state"></i></dt>
+                <dd><a href="##">服务列表</a></dd>
+                <dd><a href="##">新增服务</a></dd>
+                <dd><a href="##">查看服务使用用户</a></dd>
+            </dl>
+            <dl>
+                <dt><i class="iconfont icon-pinggu"></i>医师评估管理<i class="iconfont icon-jiantou state"></i></dt>
+                <dd><a href="##">服务列表</a></dd>
+                <dd><a href="##">新增服务</a></dd>
+                <dd><a href="##">查看服务使用用户</a></dd>
+            </dl>
+            <dl>
+                <dt><i class="iconfont icon-zhuanlan"></i>医师专栏管理<i class="iconfont icon-jiantou state"></i></dt>
+                <dd><a href="##">服务列表</a></dd>
+                <dd><a href="##">新增服务</a></dd>
+                <dd><a href="##">查看服务使用用户</a></dd>
+            </dl>
+            <dl>
+                <dt><i class="iconfont icon-wenda"></i>医师问答管理<i class="iconfont icon-jiantou state"></i></dt>
+                <dd><a href="##">服务列表</a></dd>
+                <dd><a href="##">新增服务</a></dd>
+                <dd><a href="##">查看服务使用用户</a></dd>
+            </dl>
+            <dl>
+                <dt><i class="iconfont icon-xiaoxi1"></i>康信<i class="iconfont icon-jiantou state"></i></dt>
+                <dd><a href="##">服务列表</a></dd>
+                <dd><a href="##">新增服务</a></dd>
+                <dd><a href="##">查看服务使用用户</a></dd>
+            </dl>
+        </div>
+    </div>
+    <div class="main_boby">
+        <div class="title">
+            <img src="images/common_logo.png" alt="" class="logo1">
+            <img src="images/common_down.png" alt="" class="logo2">
+        </div>
+        <div class="content">
+            <div class="content_top">
+                <h1>新增服务</h1>
+                <div>
+                    <button class="active">咨询服务</button>
+                    <button>健康咨询</button>
+                    <button>方案服务</button>
+                </div>
+            </div>
+            <div class="content_bottom">
+                <div class="service_add">
+                    <div><label class="mandatory">服务名称</label><input type="text" placeholder="请输入服务名称"></div>
+                    <div><label class="mandatory">服务间接</label><textarea type="text" placeholder="请输入服务简介..."></textarea></div>
+                    <div><label class="mandatory">封面</label>
+                        <div class="inputFile_box">
+                            <span>
+                              <img src="images/add_image.png" alt="">
+                              <input type="file" class="inputFile" accept="image/png,image/jpeg,image/gif">
+                          </span>
+                        </div>
+                    </div>
+                    <div><label>标签</label>
+                        <div class="label_box">
+                            <input type="radio" name="label" id=""><span>热</span>
+                            <input type="radio" name="label" id=""><span>好评</span>
+                            <input type="radio" name="label" id=""><span>6折</span>
+                            <input type="radio" name="label" id=""><span>7折</span>
+                            <input type="radio" name="label" id=""><span>8折</span>
+                            <input type="radio" name="label" id=""><span>9折</span>
+                        </div>
+                    </div>
+                    <div><label class="mandatory">咨询价格</label>
+                        <div class="price_box">
+                            <label class="mandatory">天数</label><input type="text" placeholder="咨询天数">
+                            <label class="mandatory">价格</label><input type="text" placeholder="价格">
+                            <label>备注</label><input type="text" placeholder="备注">
+                        </div>
+                    </div>
+                    <div><label>咨询特色</label><textarea type="text" placeholder="请输入咨询特色..."></textarea></div>
+                </div>
+                <div class="operatingArea">
+                    <button>直接发布</button>
+                    <button>存为草稿</button>
+                    <button>取消</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+</body>
+<script>
+    var bheight = $(document).height();
+    $("body").css("height", bheight);
+    $(".menu dl dt").click(function() {
+        console.log($(this).hasClass('active'))
+        var dl = $(this).parent('dl');
+        if (dl.hasClass('active')) {
+            dl.removeClass('active');
+            dl.find('.state').removeClass('icon-chevron').addClass('icon-jiantou');
+        } else {
+            dl.addClass('active').siblings().removeClass('active');
+            dl.find('.state').removeClass('icon-jiantou').addClass('icon-chevron');
+            dl.siblings().find('.state').removeClass('icon-chevron').addClass('icon-jiantou');
+        }
+    });
+    $('.inputFile').change(function() {
+        var _this = $(this);
+        var reader = new FileReader();
+        file = this.files[0];
+        reader.readAsDataURL(file);
+        reader.onload = function(e) {
+            var newUrl = this.result;
+            _this.parents('.inputFile_box').append("<span><img src='" + newUrl + "'/><i class='close'>x</i></span>")
+        };
+
+    })
+    $('.inputFile_box').on('click', '.close', function() {
+        $(this).parent('span').remove();
+    })
+</script>
+
+</html>

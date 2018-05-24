@@ -1,0 +1,95 @@
+header {
+  background: #ffffff;
+  height: 70px;
+  width: 100%;
+  padding: 14px 342px;
+  box-shadow: 3px 3px 6px #d4d4d4;
+}
+header .logo1 {
+  float: left;
+}
+header .logo2 {
+  float: right;
+}
+.agreement {
+  width: 830px;
+  margin: auto;
+}
+.agreement .title {
+  font-size: 23px;
+  line-height: 100px;
+  text-align: center;
+  color: #4d4d4d;
+}
+.agreement h3 {
+  color: #43c590;
+  font-size: 14px;
+  line-height: 26px;
+}
+.agreement p {
+  font-size: 14px;
+  line-height: 26px;
+  color: #4d4d4d;
+}
+.downProp {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.36);
+  display: none;
+  position: absolute;
+  top: 0;
+}
+.downProp .prop {
+  width: 900px;
+  height: 700px;
+  border-radius: 5px;
+  display: block;
+  background: #ffffff;
+  position: absolute;
+  top: 230px;
+  left: 410px;
+  padding-left: 30px;
+  padding-top: 30px;
+}
+.downProp .prop .mask_close {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  font-size: 18px;
+  cursor: pointer;
+  position: absolute;
+  right: 13px;
+  top: 13px;
+}
+.downProp .prop .prop_left {
+  width: 460px;
+  display: inline-block;
+  overflow: hidden;
+}
+.downProp .prop .prop_left img {
+  width: 100%;
+}
+.downProp .prop .prop_right {
+  width: 240px;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 50px;
+}
+.downProp .prop .prop_right h2 {
+  color: #333333;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 86px;
+  margin-top: 35px;
+}
+.downProp .prop .prop_right a {
+  display: inline-block;
+  margin: 5px auto;
+}
+.downProp .prop .prop_right .downCode {
+  margin-top: 20px;
+}
+.downProp .prop .prop_right .downCode h4 {
+  line-height: 60px;
+  font-size: 14px;
+  color: #333333;
+}

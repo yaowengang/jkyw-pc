@@ -1,0 +1,127 @@
+body{
+  background: url(../images/login_bg.png);
+  display: block;
+}
+.main{
+  margin-top: 300px;
+
+  .maincon{
+    position: relative;  
+    width: 488px;
+    min-height: 468px;
+    background: #ffffff;
+    margin: auto;
+    border-radius: 15px;
+    .mainlogo{
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: #ffffff;
+      position: absolute;
+      top:-60px;
+      left:33%;
+      z-index: 9;
+      .logoimg{
+        display: block;
+        margin: auto;
+        margin-top: 40px;
+      }  
+    }
+    .logocon{
+      position: absolute;
+      top:-180px;
+      left:16%;      
+    }
+    .connav{
+      width: 330px;
+      height: 350px;
+      margin: auto;
+      text-align: center;
+      position: absolute;
+      top: 60px;
+      left: 78px;
+      z-index: 10;
+      h1{
+        font-size: 28px;
+      }
+      .user{
+        margin-top:35px;
+      }
+      .password{
+        margin-top: 16px;
+      }
+
+      input[type='text'],input[type='password']{
+        font-size: 16px;
+        width: 100%;
+        height: 40px;
+        padding-bottom: 4px;
+        border-bottom: 1px #e6e6e6 solid;
+        display: block;
+      }
+     
+      .error{
+        label{
+        text-align: left;
+        display: block;
+        color: #ff6f4b;
+      
+        }
+      input[type='text'], input[type='password']{
+        border-bottom: 1px #ff3300 solid;    
+        }
+      }
+      input{
+        &:focus{
+          border-bottom: 1px #10d1a0 solid;
+        }
+      }       
+      .userProtocol{
+        float: left;
+        display: block;
+        line-height: 50px;
+        a{
+          color: #10d1a0;
+        }
+      }
+      button{
+        width: 100%;
+        height: 46px;
+        bottom: 0;
+        margin-top: 82px;
+        background: #10d1a0;
+        color: #ffffff;
+        font-size: 20px;
+        display: block;
+        border-radius: 3px;
+      }
+      .registerBtn{
+        margin-top: 20px;        
+      }
+      .loginFunction{
+        margin-top: 15px;
+        a{
+        color: #10d1a0;
+        }
+        .register,.loginHerf{
+          float: left;
+          text-decoration:underline;
+        }
+        .forget{
+          float: right;
+        }
+      }
+    }
+  }
+  .registercon{
+    min-height: 536px;
+  }  
+}
+
+.dowloadHerf{
+  display: block;
+  text-align: center;
+  margin-top: 36px;
+}
+
+

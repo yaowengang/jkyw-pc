@@ -1,0 +1,46 @@
+.main_boby .content {
+  width: 100%;
+  display: block;
+}
+.main_boby .content .content_top .wallet {
+  width: 100%;
+  height: 484px;
+  background: url(../images/wallet.png) no-repeat;
+  text-align: center;
+  padding-top: 140px;
+}
+.main_boby .content .content_top .wallet p {
+  color: #00b579;
+}
+.main_boby .content .content_top .wallet div {
+  width: 660px;
+  margin: auto;
+}
+.main_boby .content .content_top .wallet div.walletNumber span {
+  display: inline-block;
+  line-height: 140px;
+  font-size: 110px;
+  color: #ff8400;
+}
+.main_boby .content .content_top .wallet div.walletNumber img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: auto 15px;
+  vertical-align: baseline;
+}
+.main_boby .content .content_top .wallet div.operate {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 65px;
+}
+.main_boby .content .content_top .wallet div.operate button {
+  width: 262px;
+  height: 68px;
+  border: 1px solid #ffffff;
+  text-align: center;
+  color: #ffffff;
+  font-size: 28px;
+  background: transparent;
+  border-radius: 5px;
+}

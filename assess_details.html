@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/common.css">
+    <link rel="stylesheet" href="style/assess_details.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_420278_ff6suhdpderyhkt9.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="userImg">
+            <img src="images/userimage.png" alt="">
+            <p>陈独秀</p>
+        </div>
+        <div class="menu">
+            <dl>
+                <dt><i class="iconfont icon-gongzuotai"></i>工作台</i></dt>
+            </dl>
+            <dl class="active">
+                <dt><i class="iconfont icon-ffuwu"></i>医师管理服务<i class="iconfont icon-chevron state"></i></dt>
+                <dd class="active">服务列表</dd>
+                <dd>新增服务</dd>
+                <dd>查看服务使用用户</dd>
+            </dl>
+            <dl>
+                <dt><i class="iconfont icon-fangan"></i>医师方案管理<i class="iconfont icon-jiantou state"></i></dt>
+                <dd>服务列表</dd>
+                <dd>新增服务</dd>
+                <dd>查看服务使用用户</dd>
+            </dl>
+            <dl>
+                <dt><i class="iconfont icon-pinggu"></i>医师评估管理<i class="iconfont icon-jiantou state"></i></dt>
+                <dd>服务列表</dd>
+                <dd>新增服务</dd>
+                <dd>查看服务使用用户</dd>
+            </dl>
+            <dl>
+                <dt><i class="iconfont icon-zhuanlan"></i>医师专栏管理<i class="iconfont icon-jiantou state"></i></dt>
+                <dd>服务列表</dd>
+                <dd>新增服务</dd>
+                <dd>查看服务使用用户</dd>
+            </dl>
+            <dl>
+                <dt><i class="iconfont icon-wenda"></i>医师问答管理<i class="iconfont icon-jiantou state"></i></dt>
+                <dd>服务列表</dd>
+                <dd>新增服务</dd>
+                <dd>查看服务使用用户</dd>
+            </dl>
+            <dl>
+                <dt><i class="iconfont icon-xiaoxi1"></i>康信<i class="iconfont icon-jiantou state"></i></dt>
+                <dd>服务列表</dd>
+                <dd>新增服务</dd>
+                <dd>查看服务使用用户</dd>
+            </dl>
+        </div>
+    </div>
+    <div class="main_boby">
+        <div class="title">
+            <img src="images/common_logo.png" alt="" class="logo1">
+            <img src="images/common_down.png" alt="" class="logo2">
+        </div>
+        <div class="content">
+            <div class="returnSuperior">
+                <a href="javascript:history.go(-1)">&lt;&lt;返回上一级 </a>
+            </div>
+            <div class="contentcon">
+                <h1>高血压评估</h1>
+                <p class="time">创建时间：2017-12-12 15:25:45</p>
+                <div class="topic">
+                    <div class="topic_title">
+                        <i>1、</i>平均每天睡眠时长<span>单选</span>
+                    </div>
+                    <div class="option">
+                        <p><i>A</i>4-5小时</p>
+                        <p><i>B</i>4-5小时</p>
+                        <p><i>C</i>4-5小时</p>
+                    </div>
+                </div>
+                <div class="topic">
+                    <div class="topic_title">
+                        <i>2、</i>平均每天睡眠时长<b>(至少选则2项)</b><span>多选</span>
+                    </div>
+                    <div class="option">
+                        <p><i>A</i>4-5小时</p>
+                        <p><i>B</i>4-5小时</p>
+                        <p><i>C</i>4-5小时</p>
+                    </div>
+                </div>
+                <div class="topic">
+                    <div class="topic_title">
+                        <i>3、</i>平均每天睡眠时长<b>(回答不可超过200字)</b><span>问答</span>
+                    </div>
+                </div>
+                <div class="operation">
+                    <button>删除</button>
+                    <button>修改</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var bheight = $(document).height();
+    $("body").css("height", bheight);
+    $(".menu dl dt").click(function() {
+        console.log($(this).hasClass('active'))
+        var dl = $(this).parent('dl');
+        if (dl.hasClass('active')) {
+            dl.removeClass('active');
+            dl.find('.state').removeClass('icon-chevron').addClass('icon-jiantou');
+        } else {
+            dl.addClass('active').siblings().removeClass('active');
+            dl.find('.state').removeClass('icon-jiantou').addClass('icon-chevron');
+            dl.siblings().find('.state').removeClass('icon-chevron').addClass('icon-jiantou');
+        }
+    });
+</script>
+
+</html>

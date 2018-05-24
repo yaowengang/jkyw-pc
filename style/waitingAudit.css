@@ -1,0 +1,140 @@
+body {
+  background: #f5f5f5;
+}
+body header {
+  background: #10d1a0;
+  height: 70px;
+  width: 100%;
+  padding: 14px 342px;
+}
+body header .logo1 {
+  float: left;
+}
+body header .logo2 {
+  float: right;
+}
+body .crumbs {
+  width: 100%;
+  height: 80px;
+  text-align: center;
+  padding: 14px 360px;
+  background: #ffffff;
+  overflow: hidden;
+}
+body .crumbs span {
+  float: left;
+  width: 25%;
+  height: 50px;
+  font-size: 16px;
+  border: 1px solid #e6e6e6;
+  line-height: 50px;
+  border-radius: 3px;
+  color: #b2b2b2;
+}
+body .crumbs span.finish {
+  color: #10d1a0;
+  border: 1px solid #10d1a0;
+}
+body .crumbs span.finish::after {
+  content: url(../images/finish.png);
+}
+body .crumbs span.underway {
+  color: #ffffff;
+  background: #10d1a0;
+}
+body .fillIn {
+  width: 900px;
+  min-height: 778px;
+  background: #ffffff;
+  margin: auto;
+  margin-top: 10px;
+  border-radius: 3px;
+}
+body .fillIn .fuillLeft {
+  width: 184px;
+  min-height: calc(714px);
+  border-right: #f5f5f5 1px solid;
+  float: left;
+  text-align: center;
+  padding-top: 30px;
+}
+body .fillIn .fuillLeft p {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #10d1a0;
+}
+body .fillIn .fuillRight {
+  width: 450px;
+  float: left;
+  padding-left: 40px;
+  padding-top: 16px;
+}
+body .fillIn .fuillRight > div {
+  margin: 10px auto;
+  font-size: 14px;
+  min-height: 40px;
+  position: relative;
+}
+body .fillIn .fuillRight > div > span {
+  color: #000000;
+  text-align: right;
+  display: inline-block;
+  width: 60px;
+  height: 40px;
+  line-height: 40px;
+  vertical-align: top;
+}
+body .fillIn .fuillRight > div > div {
+  width: 310px;
+  margin-left: 30px;
+  display: inline-block;
+  line-height: 40px;
+}
+body .fillIn .fuillRight > div .Introduction {
+  line-height: 24px;
+}
+body .fillIn .fuillRight > div .inputFile_box {
+  display: inline-block;
+  width: 310px;
+  margin-left: 12px;
+}
+body .fillIn .fuillRight > div .inputFile_box span {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  display: inline-block;
+  margin: auto 5px;
+}
+body .fillIn .fuillRight > div .inputFile_box span img {
+  width: 100%;
+  height: 100%;
+}
+body .fillIn .fuillRight > div .goodAt span {
+  display: inline-block;
+  line-height: 24px;
+  background: #10d1a0;
+  color: #ffffff;
+  padding: 0px 10px;
+}
+body .fillIn .fuillRight > .inReviw {
+  height: 30px;
+  bottom: 0;
+  margin-top: 6px;
+  color: #10d1a0;
+  font-size: 14px;
+  display: block;
+  border-radius: 3px;
+  margin-left: 100px;
+}
+body .fillIn .fuillRight .error input {
+  border: 1px #ff3300 solid;
+}
+body .fillIn .fuillRight .error label {
+  text-align: left;
+  display: block;
+  color: #ff6f4b;
+  margin-left: 86px;
+}
+body .fillIn .fuillRight .error .dropdown {
+  border: 1px #ff3300 solid;
+}

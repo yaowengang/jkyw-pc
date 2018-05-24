@@ -1,0 +1,164 @@
+.main_boby .content h1 {
+  font-size: 28px;
+  padding-left: 90px;
+  line-height: 85px;
+  color: #666666;
+}
+.main_boby .content .recharge {
+  width: 600px;
+  height: 630px;
+  text-align: center;
+  margin: auto;
+  position: relative;
+}
+.main_boby .content .recharge > p {
+  font-size: 20px;
+  font-weight: bold;
+  color: #666666;
+}
+.main_boby .content .recharge ul li {
+  width: 180px;
+  height: 88px;
+  color: #10d1a0;
+  font-size: 18px;
+  margin: 10px;
+  float: left;
+  background: #ffffff;
+  border: 1px #10d1a0 solid;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+}
+.main_boby .content .recharge ul li.active {
+  background: #10d1a0;
+  color: #ffffff;
+  border: none;
+}
+.main_boby .content .recharge ul li div {
+  width: 100%;
+  text-align: center;
+}
+.main_boby .content .recharge ul li div > p {
+  line-height: 30px;
+  display: block;
+}
+.main_boby .content .recharge .channel {
+  float: left;
+  margin-left: 22px;
+  width: 156px;
+  margin-top: 50px;
+}
+.main_boby .content .recharge .channel p {
+  display: block;
+  position: relative;
+  line-height: 30px;
+  font-size: 16px;
+  color: #333333;
+  margin: 14px auto;
+}
+.main_boby .content .recharge .channel p input[type="radio"] {
+  width: 30px;
+  height: 30px;
+  opacity: 0;
+}
+.main_boby .content .recharge .channel p label {
+  position: absolute;
+  left: 5px;
+  top: 3px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #999;
+}
+.main_boby .content .recharge .channel p input:checked + label {
+  background-color: #10d1a0;
+  border: 1px solid #10d1a0;
+}
+.main_boby .content .recharge .channel p input:checked + label::after {
+  position: absolute;
+  content: "";
+  width: 11px;
+  height: 19px;
+  top: -2px;
+  left: 6px;
+  border: 4px solid #fff;
+  border-top: none;
+  border-left: none;
+  transform: rotate(45deg);
+}
+.main_boby .content .recharge .channel p .iconfont {
+  font-size: 30px;
+  margin: auto 20px;
+}
+.main_boby .content .recharge .channel p .iconfont.icon-zhifubao {
+  color: #00a7ec;
+}
+.main_boby .content .recharge .channel p .iconfont.icon-weixin {
+  color: #02c75a;
+}
+.main_boby .content .recharge .channel p button {
+  border: none;
+  background: #10d1a0;
+  height: 30px;
+  width: 110px;
+  text-align: center;
+  line-height: 30px;
+  color: #ffffff;
+  border-radius: 5px;
+  margin: 0 4px;
+  font-size: 14px;
+  float: right;
+}
+.main_boby .content .recharge .channel input[type='text'] {
+  height: 40px;
+  background: #f5f5f5;
+  border-radius: 3px;
+  border: 1px #e6e6e6 solid;
+  padding: 12px 13px;
+  width: 380px;
+}
+.main_boby .content .recharge .channel .tips {
+  color: #10d1a0;
+  line-height: 40px;
+  font-size: 14px;
+}
+.main_boby .content .recharge .channel .tips label {
+  margin: auto 10px;
+}
+.main_boby .content .recharge .channel .tips2 {
+  color: #999999;
+  margin-top: 40px;
+  font-size: 12px;
+}
+.main_boby .content .recharge .channel > button {
+  border: none;
+  background: #10d1a0;
+  height: 40px;
+  width: 385px;
+  text-align: center;
+  line-height: 40px;
+  color: #ffffff;
+  border-radius: 3px;
+  margin: 0 4px;
+  font-size: 14px;
+  margin-top: 128px;
+}
+.main_boby .content .recharge .qrCode {
+  width: 300px;
+  height: 320px;
+  border-radius: 5px;
+  border: 1px solid #e6e6e6;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.main_boby .content .recharge .qrCode p {
+  font-size: 14px;
+  line-height: 48px;
+  color: #666666;
+  text-align: center;
+}
+.main_boby .content .recharge .qrCode img {
+  width: 250px;
+  height: 250px;
+}

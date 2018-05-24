@@ -1,0 +1,160 @@
+.main_boby .content .content_top {
+  height: 140px;
+  border-bottom: 1px solid #e6e6e6;
+}
+.main_boby .content .content_top h1 {
+  line-height: 74px;
+  padding-left: 88px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #666666;
+}
+.main_boby .content .content_top .returnSuperior {
+  padding-left: 80px;
+  line-height: 50px;
+}
+.main_boby .content .content_top .returnSuperior a {
+  color: #10d1a0;
+  font-size: 14px;
+}
+.main_boby .content .content_buttom {
+  width: 490px;
+  margin: auto;
+  padding-top: 48px;
+}
+.main_boby .content .content_buttom > div {
+  margin: 40px auto;
+}
+.main_boby .content .content_buttom > div > label {
+  display: inline-block;
+  width: 80px;
+  text-align: right;
+  vertical-align: top;
+  color: #333333;
+  font-size: 20px;
+}
+.main_boby .content .content_buttom > div > div {
+  display: inline-block;
+  margin-left: 22px;
+  width: 382px;
+}
+.main_boby .content .content_buttom > div > div p {
+  display: block;
+  position: relative;
+  line-height: 30px;
+  font-size: 16px;
+  color: #333333;
+  margin: 14px auto;
+}
+.main_boby .content .content_buttom > div > div p input[type="radio"] {
+  width: 30px;
+  height: 30px;
+  opacity: 0;
+}
+.main_boby .content .content_buttom > div > div p label {
+  position: absolute;
+  left: 5px;
+  top: 3px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #999;
+}
+.main_boby .content .content_buttom > div > div p input:checked + label {
+  background-color: #10d1a0;
+  border: 1px solid #10d1a0;
+}
+.main_boby .content .content_buttom > div > div p input:checked + label::after {
+  position: absolute;
+  content: "";
+  width: 11px;
+  height: 19px;
+  top: -2px;
+  left: 6px;
+  border: 4px solid #fff;
+  border-top: none;
+  border-left: none;
+  transform: rotate(45deg);
+}
+.main_boby .content .content_buttom > div > div p .iconfont {
+  font-size: 30px;
+  margin: auto 20px;
+}
+.main_boby .content .content_buttom > div > div p .iconfont.icon-zhifubao {
+  color: #00a7ec;
+}
+.main_boby .content .content_buttom > div > div p .iconfont.icon-weixin {
+  color: #02c75a;
+}
+.main_boby .content .content_buttom > div > div p button {
+  border: none;
+  background: #10d1a0;
+  height: 30px;
+  width: 110px;
+  text-align: center;
+  line-height: 30px;
+  color: #ffffff;
+  border-radius: 5px;
+  margin: 0 4px;
+  font-size: 14px;
+  float: right;
+}
+.main_boby .content .content_buttom > div > div input[type='text'] {
+  height: 40px;
+  background: #f5f5f5;
+  border-radius: 3px;
+  border: 1px #e6e6e6 solid;
+  padding: 12px 13px;
+  width: 380px;
+}
+.main_boby .content .content_buttom > div > div .tips {
+  color: #10d1a0;
+  line-height: 40px;
+  font-size: 14px;
+}
+.main_boby .content .content_buttom > div > div .tips label {
+  margin: auto 10px;
+}
+.main_boby .content .content_buttom > div > div .tips2 {
+  color: #999999;
+  margin-top: 40px;
+  font-size: 12px;
+}
+.main_boby .content .content_buttom > div > div > button {
+  border: none;
+  background: #10d1a0;
+  height: 40px;
+  width: 385px;
+  text-align: center;
+  line-height: 40px;
+  color: #ffffff;
+  border-radius: 3px;
+  margin: 0 4px;
+  font-size: 14px;
+  margin-top: 128px;
+}
+.main_boby .content .content_buttom .bindState {
+  width: 382px;
+  text-align: center;
+  margin: auto;
+  margin-top: 100px;
+}
+.main_boby .content .content_buttom .bindState div {
+  margin: auto;
+  width: 156px;
+  height: 180px;
+}
+.main_boby .content .content_buttom .bindState div.error {
+  background: url(../images/error.png);
+}
+.main_boby .content .content_buttom .bindState div.succeed {
+  background: url(../images/succeed.png);
+}
+.main_boby .content .content_buttom .bindState p {
+  margin-top: 20px;
+}
+.main_boby .content .content_buttom .bindState p a {
+  color: #10d1a0;
+  cursor: pointer;
+  margin: auto 10px;
+}

@@ -1,0 +1,308 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+th,
+td,
+p,
+blockquote,
+pre,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+hr,
+div {
+    margin: 0;
+    padding: 0
+}
+
+body,
+button,
+input,
+select,
+textarea,
+header {
+    font-family: PingFangSC-Medium, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: normal
+}
+
+li {
+    list-style: none;
+}
+
+fieldset,
+img {
+    border: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+q:before,
+q:after {
+    content: "";
+}
+
+button,
+input,
+select,
+textarea {
+    font-size: 100%;
+}
+
+legend {
+    color: #000000;
+}
+
+small {
+    font-size: 12px;
+}
+
+hr {
+    border: none;
+    height: 1px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.clear:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clear {
+    zoom: 1;
+}
+
+i {
+    font-style: normal
+}
+
+body {
+    background: #ffffff;
+}
+
+
+/* CSS Reset*/
+
+a {
+    background: transparent;
+    text-decoration: none;
+    color: #000;
+}
+
+a:active {
+    outline: 0;
+}
+
+b,
+strong {
+    font-weight: bold;
+}
+
+dfn {
+    font-style: normal;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    /* For some Androids */
+    outline: none;
+    box-sizing: border-box;
+}
+
+input,
+textarea,
+button {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-family: PingFangSC-Medium, sans-serif;
+}
+
+textarea {
+    resize: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td,
+th {
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+form,
+blockquote {
+    margin: 0;
+}
+
+ul,
+ol,
+li,
+dl,
+dd {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+    color: #ccc;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    color: #ccc;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #ccc;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+
+/* Hides from IE-mac \*/
+
+* html .clearfix {
+    height: 1%;
+}
+
+input,
+button {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.main_boby {
+    height: 100%;
+    width: calc(100% - 336px);
+}
+
+.main_boby .logo1 {
+    float: left;
+}
+
+.main_boby .logo2 {
+    float: right;
+}
+
+button {
+    cursor: pointer;
+}
+
+.m_zlxg {
+    width: 93px;
+    height: 30px;
+    line-height: 30px;
+    cursor: pointer;
+    float: left;
+    margin: 0 10px 0 0;
+    background: url(../images/zlxg2.jpg) no-repeat;
+}
+
+.m_zlxg p {
+    width: 71px;
+    padding-left: 10px;
+    overflow: hidden;
+    line-height: 30px;
+    color: #333333;
+    font-size: 12px;
+    font-family: "微软雅黑";
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.m_zlxg2 {
+    position: absolute;
+    top: 29px;
+    border: 1px solid #ded3c1;
+    background: #fff;
+    width: 91px;
+    display: none;
+    max-height: 224px;
+    -height: 224px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    white-space: nowrap;
+}
+
+.m_zlxg2 li {
+    line-height: 28px;
+    white-space: nowrap;
+    padding-left: 10px;
+    font-family: "微软雅黑";
+    color: #333333;
+    font-size: 12px;
+}
+
+.m_zlxg2 li:hover {
+    color: #ffffff;
+    background: #43c590;
+}

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/common.css">
+    <link rel="stylesheet" href="style/servicelist.css">
+    <link rel="stylesheet" href="style/pageNav.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_420278_ff6suhdpderyhkt9.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="userImg">
+            <img src="images/userimage.png" alt="">
+            <p>陈独秀</p>
+        </div>
+        <div class="menu">
+            <dl>
+                <dt><i class="iconfont icon-gongzuotai"></i>工作台</i></dt>
+            </dl>
+            <dl class="active">
+                <dt><i class="iconfont icon-ffuwu"></i>医师管理服务<i class="iconfont icon-chevron state"></i></dt>
+                <dd class="active"><a href="ServiceList.html">服务列表</a></dd>
+                <dd><a href="addServic.html">新增服务</a></dd>
+                <dd><a href="##">查看服务使用用户</a></dd>
+            </dl>
+            <dl>
+                <dt><i class="iconfont icon-fangan"></i>医师方案管理<i class="iconfont icon-jiantou state"></i></dt>
+                <dd><a href="##">服务列表</a></dd>
+                <dd><a href="##">新增服务</a></dd>
+                <dd><a href="##">查看服务使用用户</a></dd>
+            </dl>
+            <dl>
+                <dt><i class="iconfont icon-pinggu"></i>医师评估管理<i class="iconfont icon-jiantou state"></i></dt>
+                <dd><a href="##">服务列表</a></dd>
+                <dd><a href="##">新增服务</a></dd>
+                <dd><a href="##">查看服务使用用户</a></dd>
+            </dl>
+            <dl>
+                <dt><i class="iconfont icon-zhuanlan"></i>医师专栏管理<i class="iconfont icon-jiantou state"></i></dt>
+                <dd><a href="##">服务列表</a></dd>
+                <dd><a href="##">新增服务</a></dd>
+                <dd><a href="##">查看服务使用用户</a></dd>
+            </dl>
+            <dl>
+                <dt><i class="iconfont icon-wenda"></i>医师问答管理<i class="iconfont icon-jiantou state"></i></dt>
+                <dd><a href="##">服务列表</a></dd>
+                <dd><a href="##">新增服务</a></dd>
+                <dd><a href="##">查看服务使用用户</a></dd>
+            </dl>
+            <dl>
+                <dt><i class="iconfont icon-xiaoxi1"></i>康信<i class="iconfont icon-jiantou state"></i></dt>
+                <dd><a href="##">服务列表</a></dd>
+                <dd><a href="##">新增服务</a></dd>
+                <dd><a href="##">查看服务使用用户</a></dd>
+            </dl>
+        </div>
+    </div>
+    <div class="main_boby">
+        <div class="title">
+            <img src="images/common_logo.png" alt="" class="logo1">
+            <img src="images/common_down.png" alt="" class="logo2">
+        </div>
+        <div class="content">
+            <div class="content_top">
+                <div class="search_box">
+                    <i class="iconfont icon-sousuo"></i>
+                    <input type="text" placeholder="请输入你要搜索的方案">
+                    <i class="iconfont icon-guanbi1"></i>
+                </div>
+                <div class="label">
+                    <div>
+                        <span>服务类型：</span>
+                        <button class="active">全部</button>
+                        <button>咨询</button>
+                        <button>康复状态</button>
+                        <button>方案</button>
+                    </div>
+                    <div>
+                        <span>服务状态：</span>
+                        <button class="active">全部</button>
+                        <button>已发布</button>
+                        <button>编辑中</button>
+                    </div>
+                </div>
+            </div>
+            <div class="operatingArea">
+                <h1>服务列表</h1>
+                <div class="operationBatch">
+                    <span>批量处理</span>
+                    <button>取消发布</button>
+                    <button>发布</button>
+                    <button>取消</button>
+                </div>
+            </div>
+            <div class="listArea">
+                <table align="center">
+                    <thead>
+                        <tr>
+                            <td><input type="checkbox" name="" id=""></td>
+                            <td>序号</td>
+                            <td>服务名</td>
+                            <td>标签</td>
+                            <td>时间</td>
+                            <td>购买次数</td>
+                            <td>服务类型</td>
+                            <td>好评率</td>
+                            <td>状态</td>
+                            <td></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox" name="" id=""></td>
+                            <td>1</td>
+                            <td>体重控制方案</td>
+                            <td>好评</td>
+                            <td>2018/02/12 09:10</td>
+                            <td>123</td>
+                            <td>方案</td>
+                            <td>88%</td>
+                            <td>已发布</td>
+                            <td>
+                                <button>取消发布</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="" id=""></td>
+                            <td>1</td>
+                            <td>体重控制方案</td>
+                            <td>好评</td>
+                            <td>2018/02/12 09:10</td>
+                            <td>123</td>
+                            <td>方案</td>
+                            <td>88%</td>
+                            <td>已发布</td>
+                            <td>
+                                <button>发布</button>
+                                <button>编辑</button>
+                                <button>删除</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="" id=""></td>
+                            <td>1</td>
+                            <td>体重控制方案</td>
+                            <td>好评</td>
+                            <td>2018/02/12 09:10</td>
+                            <td>123</td>
+                            <td>方案</td>
+                            <td>88%</td>
+                            <td>已发布</td>
+                            <td>
+                                <button>取消发布</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="" id=""></td>
+                            <td>1</td>
+                            <td>体重控制方案</td>
+                            <td>好评</td>
+                            <td>2018/02/12 09:10</td>
+                            <td>123</td>
+                            <td>方案</td>
+                            <td>88%</td>
+                            <td>已发布</td>
+                            <td>
+                                <button>发布</button>
+                                <button>编辑</button>
+                                <button>删除</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="" id=""></td>
+                            <td>1</td>
+                            <td>体重控制方案</td>
+                            <td>好评</td>
+                            <td>2018/02/12 09:10</td>
+                            <td>123</td>
+                            <td>方案</td>
+                            <td>88%</td>
+                            <td>已发布</td>
+                            <td>
+                                <button>取消发布</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="" id=""></td>
+                            <td>1</td>
+                            <td>体重控制方案</td>
+                            <td>好评</td>
+                            <td>2018/02/12 09:10</td>
+                            <td>123</td>
+                            <td>方案</td>
+                            <td>88%</td>
+                            <td>已发布</td>
+                            <td>
+                                <button>发布</button>
+                                <button>编辑</button>
+                                <button>删除</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="" id=""></td>
+                            <td>1</td>
+                            <td>体重控制方案</td>
+                            <td>好评</td>
+                            <td>2018/02/12 09:10</td>
+                            <td>123</td>
+                            <td>方案</td>
+                            <td>88%</td>
+                            <td>已发布</td>
+                            <td>
+                                <button>发布</button>
+                                <button>编辑</button>
+                                <button>删除</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="pageBox">
+                <nav aria-label="Page navigation" class="page-nav-outer" id="PageNavId"></nav>
+            </div>
+        </div>
+</body>
+<script src="js/pageNav.js"></script>
+<script>
+    /*
+     *设置高度
+     */
+    var bheight = $(document).height();
+    $("body").css("height", bheight);
+    /*
+     *左侧开关
+     */
+    $(".menu dl dt").click(function() {
+        console.log($(this).hasClass('active'))
+        var dl = $(this).parent('dl');
+        if (dl.hasClass('active')) {
+            dl.removeClass('active');
+            dl.find('.state').removeClass('icon-chevron').addClass('icon-jiantou');
+        } else {
+            dl.addClass('active').siblings().removeClass('active');
+            dl.find('.state').removeClass('icon-jiantou').addClass('icon-chevron');
+            dl.siblings().find('.state').removeClass('icon-chevron').addClass('icon-jiantou');
+        }
+    });
+    /*
+     *隔行换色
+     */
+    $("tbody tr").css("background", "#ffffff");
+    $("tbody tr:even").css("background", "#f1fbf8");
+    /*
+     *全选/反选
+     */
+    $("thead tr td :checkbox").on("click", function() {
+        if (this.checked) {
+            $("tbody tr td :checkbox").prop("checked", true);
+        } else {
+            $("tbody tr td :checkbox").prop("checked", false);
+        }
+    })
+
+    $("tbody tr td :checkbox").on('click', function() {
+        allchk()
+    });
+
+    function allchk() {
+        var chknum = $("tbody tr").length; //选项总个数
+        var chk = 0;
+        $("tbody tr td :checkbox").each(function() {
+            if ($(this).prop("checked") == true) {
+                chk++;
+            }
+        });
+        if (chknum == chk) { //全选
+            $("thead tr td :checkbox").prop("checked", true);
+        } else { //不全选
+            $("thead tr td :checkbox").prop("checked", false);
+        }
+    }
+    /*
+     *分页标签
+     */
+    var pageNavObj = null; //用于储存分页对象
+    pageNavObj = new PageNavCreate("PageNavId", {
+        pageCount: 30,
+        currentPage: 1,
+        perPageNum: 5,
+    });
+    pageNavObj.afterClick(pageNavCallBack);
+
+    function pageNavCallBack(clickPage) {
+        pageNavObj = new PageNavCreate("PageNavId", {
+            pageCount: 30,
+            currentPage: clickPage,
+            perPageNum: 5,
+        });
+        console.log(clickPage)
+        pageNavObj.afterClick(pageNavCallBack);
+    }
+</script>
+
+</html>

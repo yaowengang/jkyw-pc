@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/common.css">
+    <link rel="stylesheet" href="style/select.css">
+    <link rel="stylesheet" href="style/zm.css">
+    <link rel="stylesheet" href="style/addManagement.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_420278_op6wu543fwbi6bt9.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script text="text/javascript" src="js/pinying.js" charset="GBK"></script>
+    <script text="text/javascript" src="js/sort.js"></script>
+    <script text="text/javascript" src="js/select.js"></script>
+    </style>
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="userImg">
+            <img src="images/userimage.png" alt="">
+            <p>陈独秀</p>
+        </div>
+        <div class="menu">
+            <dl>
+                <dt><i class="iconfont icon-gongzuotai"></i>工作台</i></dt>
+            </dl>
+            <dl class="active">
+                <dt><i class="iconfont icon-ffuwu"></i>医师管理服务<i class="iconfont icon-chevron state"></i></dt>
+                <dd><a href="ServiceList.html">服务列表</a></dd>
+                <dd class="active"><a href="addServic.html">新增服务</a></dd>
+                <dd><a href="##">查看服务使用用户</a></dd>
+            </dl>
+            <dl>
+                <dt><i class="iconfont icon-fangan"></i>医师方案管理<i class="iconfont icon-jiantou state"></i></dt>
+                <dd><a href="##">服务列表</a></dd>
+                <dd><a href="##">新增服务</a></dd>
+                <dd><a href="##">查看服务使用用户</a></dd>
+            </dl>
+            <dl>
+                <dt><i class="iconfont icon-pinggu"></i>医师评估管理<i class="iconfont icon-jiantou state"></i></dt>
+                <dd><a href="##">服务列表</a></dd>
+                <dd><a href="##">新增服务</a></dd>
+                <dd><a href="##">查看服务使用用户</a></dd>
+            </dl>
+            <dl>
+                <dt><i class="iconfont icon-zhuanlan"></i>医师专栏管理<i class="iconfont icon-jiantou state"></i></dt>
+                <dd><a href="##">服务列表</a></dd>
+                <dd><a href="##">新增服务</a></dd>
+                <dd><a href="##">查看服务使用用户</a></dd>
+            </dl>
+            <dl>
+                <dt><i class="iconfont icon-wenda"></i>医师问答管理<i class="iconfont icon-jiantou state"></i></dt>
+                <dd><a href="##">服务列表</a></dd>
+                <dd><a href="##">新增服务</a></dd>
+                <dd><a href="##">查看服务使用用户</a></dd>
+            </dl>
+            <dl>
+                <dt><i class="iconfont icon-xiaoxi1"></i>康信<i class="iconfont icon-jiantou state"></i></dt>
+                <dd><a href="##">服务列表</a></dd>
+                <dd><a href="##">新增服务</a></dd>
+                <dd><a href="##">查看服务使用用户</a></dd>
+            </dl>
+        </div>
+    </div>
+    <div class="main_boby">
+        <div class="title">
+            <img src="images/common_logo.png" alt="" class="logo1">
+            <img src="images/common_down.png" alt="" class="logo2">
+        </div>
+        <div class="content">
+            <div class="content_bottom">
+                <h1>新增方案</h1>
+                <div class="addManage">
+                    <div>
+                        <label class="mandatory">方案名称</label>
+                        <input type="text" placeholder="请输入方案名称">
+                    </div>
+                    <div>
+                        <label class="mandatory">方案周期</label>
+                        <input type="text" placeholder="请输入方案周期">
+                        <span class="unit">天</span>
+                    </div>
+                    <div>
+                        <label class="mandatory">适用人群特征</label>
+                        <div class="suitableCroud">
+                            <img src="images/edit_con.png" alt="" class="edit_btn apply">
+                            <div class="goodAt">
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="mandatory">不适用人群特征</label>
+                        <div class="suitableCroud">
+                            <img src="images/edit_con.png" alt="" class="edit_btn unapply">
+                            <div class="goodAt">
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <label>健康任务</label>
+                        <div class="task">
+                            <button class="addTask">新增健康任务</button>
+                            <ul>
+                                <li>
+                                    <div>
+                                        <span><i class="iconfont icon-changpian"></i>听音乐</span>
+                                        <span>1天1次</span>
+                                    </div>
+									<i class="iconfont icon-jian1"></i>
+                                </li>
+                                <li>
+                                    <div>
+                                        <span><i class="iconfont icon-changpian"></i>听音乐</span>
+                                        <span>1天1次</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <label>运动项目</label>
+                        <div class="task">
+                            <button class="addexercise">新增运动项目</button>
+                            <ul>
+                                <li>
+                                    <div>
+                                        <span><i class="iconfont icon-changpian"></i>听音乐</span>
+                                        <span class="units">1500分钟</span>
+                                        <span>1天1次</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <label>食谱</label>
+                        <div class="task_recipe">
+                            <button class="add_recipe">新增食谱</button>
+                            <ul>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <label>食谱</label>
+                        <textarea name="" placeholder="请输入方案描述"></textarea>
+                    </div>
+                    <div class="opera">
+                        <button>添加</button>
+                        <button>取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="mask">
+        <div class="prop">
+            <i class="mask_close">X</i>
+            <div class="preview">
+                <label>已选择</label>
+                <span>A擅长1<img src="images/close.png"></span>
+                <span>B擅长1<img src="images/close.png"></span>
+                <span>F如果现实不下，折行显示<img src="images/close.png"></span>
+            </div>
+            <div class="selection">
+                <div class="optionGroup">
+                    <div class="active">ABCDEF</div>
+                    <div>GHIJK</div>
+                    <div>LMNOP</div>
+                    <div>QRSTU</div>
+                    <div>VWXYZ#</div>
+                </div>
+                <div class="sort_box">
+                    <div class="option on"></div>
+                    <div class="option"></div>
+                    <div class="option"></div>
+                    <div class="option"></div>
+                    <div class="option"></div>
+                </div>
+            </div>
+            <div class="confirm_box">
+                <button class="confirm" style="float:right; margin-top:30px;margin-right:30px;">确认</button>
+            </div>
+        </div>
+    </div>
+    <div class="mask_add props_box">
+        <div class="props">
+            <h1>编辑健康任务</h1>
+            <div class="choose">
+                <label>任务：</label>
+                <select class="select_type">
+                    <option data-display-text="听音乐" value="1">听音乐</option>
+                    <option data-display-text="就寝服务" value="4">就寝服务</option>
+                    <option data-display-text="测量血压" value="3">测量血压</option>
+                    <option data-display-text="测量血糖" value="3">测量血糖</option>
+                    <option data-display-text="测量心率" value="3">测量心率</option>
+                    <option data-display-text="测量体重" value="2">测量体重</option>
+                    <option data-display-text="午休" value="1">午休</option>
+                    <option data-display-text="泡脚" value="1">泡脚</option>
+                    <option data-display-text="看电影" value="1">看电影</option>
+                    <option data-display-text="每日一便" value="1">每日一便</option>
+                    <option data-display-text="戒烟" value="1">戒烟</option>
+                    <option data-display-text="手机病" value="1">手机病</option>
+                    <option data-display-text="眼部保健" value="1">眼部保健</option>
+                    <option data-display-text="颈椎保健操" value="1">颈椎保健操</option>    
+                </select>
+            </div>
+            <div class="chooser_box">
+                <ul class="immutable on">
+                    <li>
+                        <label>周期：</label>
+                        <input type="text" value="1" disabled class="period">
+                        <span class="unit">天</span>
+                    </li>
+                    <li>
+                        <label>频次：</label>
+                        <input type="text" value="1" disabled class="frequency">
+                        <span class="unit">次</span>
+                    </li>
+                </ul>
+                <ul class="diff">
+                    <li>
+                        <label>周期：</label>
+                        <input type="text" value="1" class="period">
+                        <span class="unit">天</span>
+                    </li>
+                    <li class="modification">
+                        <label>频次：</label>
+                        <input type="text" value="1" disabled class="frequency">
+                        <span class="unit">次</span>
+                    </li>
+                </ul>
+                <ul class="revisability">
+                    <li class="modification">
+                        <label>周期：</label>
+                        <input type="text" value="1" class="period">
+                        <span class="unit">天</span>
+                    </li>
+                    <li class="modification">
+                        <label>频次：</label>
+                        <input type="text" value="1" class="frequency">
+                        <span class="unit">次</span>
+                    </li>
+                </ul>
+                <ul class="settime">
+                    <li class="modification">
+                        <label>就寝：</label>
+                        <input type="time" class="period">
+                    </li>
+                    <li class="modification">
+                        <label>起床：</label>
+                        <input type="time" class="frequency">
+                    </li>
+                </ul>
+            </div>
+            <div class="operation">
+                <span class="close">取消</span>
+                <span class="confirm">确定</span>
+            </div>
+        </div>
+    </div>
+    <div class="exercise_add props_box">
+        <div class="props">
+            <h1>编辑运动项目</h1>
+            <div class="choose">
+                <label>任务：</label>
+                <select class="exercis_type">
+                        <option data-display-text="柔韧性训练" value="1">柔韧性训练</option>
+                        <option data-display-text="力量型联系" value="1">力量型联系</option>
+                        <option data-display-text="有氧运动（跑步）" value="2">有氧运动（跑步）</option>
+                        <option data-display-text="减肥操" value="1">减肥操</option>
+                        <option data-display-text="瑜伽" value="1">瑜伽</option>
+                    </select>
+            </div>
+            <div class="chooser_box">
+                <ul class="on">
+                    <li>
+                        <label>周期：</label>
+                        <input type="text" value="1" class="period">
+                        <span class="unit">天</span>
+                    </li>
+                    <li class="goal">
+                        <label>计量方式：</label>
+                        <input type="text" value="时间" class="units_type" disabled>
+                    </li>
+                    <li class="modification goal">
+                        <label>运动目标：</label>
+                        <input type="text" value="1" class="frequency">
+                        <span class="unit">分钟</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="operation">
+                <span class="close">取消</span>
+                <span class="confirm">确定</span>
+            </div>
+        </div>
+    </div>
+    <div class="addRecipe props_box">
+        <div class="props">
+            <h1>编辑运动项目</h1>
+            <div class="choose">
+                <label>餐　　别：</label>
+                <select class="food_type">
+                                <option data-display-text="早餐" value="早餐">早餐</option>
+                                <option data-display-text="早加餐" value="早加餐">早加餐</option>
+                                <option data-display-text="午餐" value="午餐">午餐</option>
+                                <option data-display-text="午加餐" value="午加餐">午加餐</option>
+                                <option data-display-text="晚餐" value="晚餐">晚餐</option>
+                                <option data-display-text="晚加餐" value="晚加餐">晚加餐</option>
+                    </select>
+            </div>
+            <div class="chooser_box">
+                <ul class="on">
+                    <li class="modification goal">
+                        <label>食物名称：</label>
+                        <input type="text" class="food_Name" placeholder="请输入食物名称">
+                    </li>
+                </ul>
+            </div>
+            <div class="operation">
+                <span class="close">取消</span>
+                <span class="confirm">确定</span>
+                <span class="amend">修改</span>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var bheight = $(document).height();
+    $("body").css("height", bheight);
+    $(".mask_add").css("height", bheight);
+    $(".exercise_add").css("height", bheight);
+    $(".menu dl dt").click(function() {
+        console.log($(this).hasClass('active'))
+        var dl = $(this).parent('dl');
+        if (dl.hasClass('active')) {
+            dl.removeClass('active');
+            dl.find('.state').removeClass('icon-chevron').addClass('icon-jiantou');
+        } else {
+            dl.addClass('active').siblings().removeClass('active');
+            dl.find('.state').removeClass('icon-jiantou').addClass('icon-chevron');
+            dl.siblings().find('.state').removeClass('icon-chevron').addClass('icon-jiantou');
+        }
+    });
+
+    $('.apply').click(function() {
+        $(".mask").fadeIn();
+        $(".mask").css("height", bheight);
+        $('.mask_close').click(function() {
+            $(this).parents('.mask').fadeOut();
+        });
+        $('.confirm').click(function() {
+            console.log($('.preview span').text());
+            $('.apply').next('.goodAt').html('');
+            $('.preview span').each(function() {
+                var _thistext = $(this).text();
+                var taghtml = "<span>" + _thistext + "<img src='../images/close.png'></span>"
+                $('.apply').next('.goodAt').append(taghtml);
+            })
+            $(".apply").css({
+                'left': '310px'
+            });
+            $(".mask").fadeOut();
+        })
+    })
+    $('.unapply').click(function() {
+        $(".mask").fadeIn();
+        $(".mask").css("height", bheight);
+        $('.mask_close').click(function() {
+            $(this).parents('.mask').fadeOut();
+        });
+        $('.confirm').click(function() {
+            console.log($('.preview span').text());
+            $('.unapply').next('.goodAt').html('');
+            $('.preview span').each(function() {
+                var _thistext = $(this).text();
+                var taghtml = "<span>" + _thistext + "<img src='../images/close.png'></span>"
+                $('.unapply').next('.goodAt').append(taghtml);
+            })
+            $(".unapply").css({
+                'left': '310px'
+            });
+            $(".mask").fadeOut();
+        })
+    })
+    $(".mask_add .select_type").change(function() {
+        $(".mask_add .chooser_box ul").eq($(this).val() - 1).addClass("on").siblings().removeClass("on");
+        var type = $(".mask_add .current").text();
+        console.log(type)
+        switch (type) {
+            case '看电影':
+                $(".mask_add .on .period").val(7);
+                $(".mask_add .on .frequency").val(1);
+                break;
+            case '眼部保健':
+            case '颈椎保健操':
+                $(".mask_add .on .period").val(1);
+                $(".mask_add .on .frequency").val("多");
+                break;
+            default:
+                $(".mask_add .on .frequency").val(1);
+                $(".mask_add .on .period").val(1);
+                break;
+        }
+    });
+    $(".exercis_type").change(function() {
+        if ($(this).val() == "2") {
+            $(".units_type").val("距离");
+            $(".frequency").next('span').text("米");
+        } else {
+            $(".units_type").val("时间");
+            $(".frequency").next('span').text("分钟");
+        }
+    });
+    var appendul, appendli;
+    $(".addTask").click(function() {
+        appendul = $(this).next("ul");
+        $(".mask_add").fadeIn();
+    });
+    $(".addexercise").click(function() {
+        appendul = $(this).next("ul");
+        $(".exercise_add").fadeIn();
+    });
+    $('.mask_add .confirm').click(function() {
+        var type = $(".mask_add .current").text();
+        var frequency = $(".mask_add .on .frequency").val(),
+            period = $(".mask_add .on .period").val(),
+            mission;
+        console.log($(".select_type").val())
+        switch ($(".select_type").val()) {
+            case '1':
+            case '2':
+                mission = period + "天" + frequency + "次";
+                break;
+            case '3':
+                mission = period + "天1次（每次" + frequency + "组)";
+                break;
+            case '4':
+                mission = period + "~" + frequency;
+                break;
+            default:
+                break;
+        }
+        appendli = '<li><div><span><i class="iconfont icon-changpian"></i>' + type + '</span><span>' + mission + '</span></div><i class="iconfont icon-jian1"></i></li>';
+        console.log(type + mission);
+        appendul.append(appendli);
+        $(".mask_add").fadeOut();
+    })
+    $('.exercise_add .confirm').click(function() {
+        var type = $(".exercis_type .current").text();
+        var frequency = $(".exercise_add .on .frequency").val(),
+            period = $(".exercise_add .on .period").val();
+        mission = period + "天1次"
+        if ($(".units_type").val() == "时间") {
+            frequency += "分钟"
+        } else {
+            frequency += "米"
+        }
+        appendli = '<li><div><span><i class="iconfont icon-changpian"></i>' + type + '</span><span class="units">' + frequency + '</span><span>' + mission + '</span></div><i class="iconfont icon-jian1"></i></li>';
+        appendul.append(appendli);
+
+        $(".exercise_add").fadeOut();
+    })
+
+    var thisRecipe, appendul;
+    $(".addRecipe").css("height", bheight);
+    $(".task_recipe").on("click", ".icon-jia", function() {
+        thisRecipe = $(this).parents("li");
+        $(".addRecipe").fadeIn();
+        $(".amend").hide();
+        $(".confirm").show();
+        $(".addRecipe .on .food_Name").val("")
+        $(".addRecipe .current").text("早餐")
+
+    })
+
+    $(".addRecipe .confirm").click(function() {
+        var type = $(".addRecipe .current").text();
+        var frequency = $(".addRecipe .on .food_Name").val();
+        var thistextList = [],
+            _this;
+        if (frequency) {
+            thisRecipe.find(".recipe_Name").each(function() {
+                thistextList.push($(this).text());
+                _this = $(this)
+            })
+            var num = $.inArray(type, thistextList)
+            if (num >= 0) {
+                console.log(typeof num)
+                appendul = _this.parents(".recipe_detials").find(".recipe_con");
+                console.log(appendul)
+                var appendP = '<p><span>' + frequency + '</span><span class="iconfont icon-shanchu">删除</span><span class="iconfont icon-bi1">编辑</span></p>';
+                appendul[num].innerHTML += appendP
+            } else {
+                appendul = thisRecipe.find(".recipe_detials");
+                console.log(appendul)
+                var appendDiv = '<div class="recipe_class"><div class="recipe_Name">' + type +
+                    '</div><div class="recipe_con"><p><span>' + frequency +
+                    '</span><span class="iconfont icon-shanchu">删除</span><span class="iconfont icon-bi1">编辑</span></p></div></div>'
+                appendul.append(appendDiv)
+            }
+        }
+        $(".addRecipe").fadeOut();
+    })
+    var oldcurrent, bi1btn;
+    $(".task_recipe").on("click", ".icon-bi1", function() {
+        bi1btn = $(this)
+        $(".addRecipe").fadeIn();
+        $(".confirm").hide();
+        $(".amend").show();
+        thisRecipe = bi1btn.parents("li");
+        // console.log($(this).parent("p").find("span:first").text())
+        // console.log($(this).parents(".recipe_class").find(".recipe_Name").text())
+        oldcurrent = $(this).parents(".recipe_class").find(".recipe_Name").text()
+        $(".addRecipe .on .food_Name").val($(this).parent("p").find("span:first").text())
+        $(".addRecipe .current").text(oldcurrent)
+    })
+    $(".addRecipe .amend").click(function() {
+        var type = $(".addRecipe .current").text();
+        var frequency = $(".addRecipe .on .food_Name").val();
+        if (frequency) {
+            if (oldcurrent == type) {
+                bi1btn.parent("p").find("span:first").text(frequency)
+            } else {
+                if (bi1btn.parents(".recipe_con").find("p").length > 1) {
+                    bi1btn.parent("p").remove();
+                } else {
+                    bi1btn.parents(".recipe_class").remove();
+                }
+                var thistextList = [],
+                    _this;
+                if (frequency) {
+                    thisRecipe.find(".recipe_Name").each(function() {
+                        thistextList.push($(this).text());
+                        _this = $(this)
+                    })
+                    var num = $.inArray(type, thistextList)
+                    if (num >= 0) {
+                        appendul = _this.parents(".recipe_detials").find(".recipe_con");
+                        var appendP = '<p><span>' + frequency + '</span><span class="iconfont icon-shanchu">删除</span><span class="iconfont icon-bi1">编辑</span></p>';
+                        appendul[num].innerHTML += appendP
+                    } else {
+                        appendul = thisRecipe.find(".recipe_detials");
+                        var appendDiv = '<div class="recipe_class"><div class="recipe_Name">' + type +
+                            '</div><div class="recipe_con"><p><span>' + frequency +
+                            '</span><span class="iconfont icon-shanchu">删除</span><span class="iconfont icon-bi1">编辑</span></p></div></div>'
+                        appendul.append(appendDiv)
+                    }
+                }
+            }
+        }
+        $(".addRecipe").fadeOut();
+    })
+    $(".task_recipe").on('click', '.icon-shanchu', function() {
+        if ($(this).parents(".recipe_con").find("p").length > 1) {
+            $(this).parent("p").remove();
+        } else {
+            $(this).parents(".recipe_class").remove();
+        }
+    });
+    var recipeNumber = 0;
+    $(".add_recipe").click(function() {
+        recipeNumber++;
+        var appendRe = $(this).next("ul");
+        var reli = '<li><div class="recipe"><h1>食谱（<span class="recipeNo">' + recipeNumber +
+            '</span>）<i class="iconfont icon-jia"></i></h1><div class="recipe_detials"></div></div><i class="iconfont icon-jian1"></i></li>';
+        appendRe.append(reli)
+    })
+    $(".task_recipe").on('click', '.icon-jian1', function() {
+        recipeNumber--;
+        $(this).parents("li").remove();
+        $(".recipeNo").each(function(i) {
+            $(this).text(i + 1)
+        })
+    });
+    $(".task").on('click', '.icon-jian1', function() {
+        $(this).parents("li").remove();
+    });
+	 $(".close").click(function(){
+            $(this).parents('.props_box').fadeOut();
+	 })
+</script>
+
+<script src="js/zm.js"></script>
+
+</html>

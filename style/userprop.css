@@ -1,0 +1,89 @@
+.userPro {
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.36);
+  position: absolute;
+}
+.userPro .prop {
+  width: 526px;
+  height: 650px;
+  background: #fff;
+  position: absolute;
+  top: 130px;
+  left: 700px;
+}
+.userPro .prop .mask_close {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  font-size: 18px;
+  cursor: pointer;
+  position: absolute;
+  right: 13px;
+  top: 13px;
+  color: #b7b7b7;
+}
+.userPro .prop .propCon h2 {
+  text-align: center;
+  line-height: 60px;
+  color: #333333;
+  font-weight: bold;
+  font-size: 20px;
+}
+.userPro .prop .propCon .picture_list {
+  width: 100%;
+  height: 250px;
+  position: relative;
+  background: #f0fffb;
+}
+.userPro .prop .propCon .picture_list .picture {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+}
+.userPro .prop .propCon .picture_list .picture.p1 {
+  background: url(../images/picture_01.png) no-repeat;
+  background-size: cover;
+}
+.userPro .prop .propCon .picture_list .picture.p2 {
+  background: url(../images/picture_02.png) no-repeat;
+  background-size: cover;
+}
+.userPro .prop .propCon .picture_list .picture.p3 {
+  background: url(../images/picture_03.png) no-repeat;
+  background-size: cover;
+}
+.userPro .prop .propCon .picture_list .picture .pictureCon {
+  width: 116px;
+  font-size: 20px;
+  color: #fff;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  margin: auto;
+  line-height: 26px;
+  margin-top: 40px;
+}
+.userPro .prop .propCon .picture_list .picture .pictureleavl {
+  color: #ee8229;
+  font-size: 20px;
+  width: 116px;
+  text-align: center;
+  margin: auto;
+}
+.userPro .prop .propCon .userDetail {
+  padding: 0px 25px;
+  margin-top: 10px;
+}
+.userPro .prop .propCon .userDetail li {
+  height: 40px;
+  line-height: 40px;
+  display: flex;
+  border-bottom: 1px solid #f5f5f5;
+  color: #333333;
+  font-size: 16px;
+  justify-content: space-between;
+}

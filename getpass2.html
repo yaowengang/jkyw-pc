@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/getpass.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/logo1.png" alt="logo1" class="logo1">
+        <img src="images/logo2.png" alt="logo2" class="logo2">
+    </header>
+    <div class="getpasscon">
+        <h1>重置密码</h1>
+        <div><span>设置密码</span><input type="password" placeholder="请输入密码" class="password"></div>
+        <div><span>确认密码</span><input type="password" placeholder="请再次输入密码" class="password"></div>
+        <button class="nextStep">完成</button>
+        <p>密码设置成功后重新登录即可</p>
+    </div>
+    <script>
+        $('.nextStep').click(function() {
+            location.href = 'index.html'
+        });
+    </script>
+</body>
+
+</html>
