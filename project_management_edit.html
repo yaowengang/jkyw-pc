@@ -8,9 +8,14 @@
     <title>Document</title>
     <link rel="stylesheet" href="style/reset.css">
     <link rel="stylesheet" href="style/common.css">
-    <link rel="stylesheet" href="style/addservic.css">
+    <link rel="stylesheet" href="style/project_management.css">
     <link rel="stylesheet" href="//at.alicdn.com/t/font_420278_ff6suhdpderyhkt9.css">
     <script src="js/jquery-3.2.1.min.js"></script>
+    <style>
+        .dropdown {
+            width: 297px;
+        }
+    </style>
 </head>
 
 <body>
@@ -68,51 +73,58 @@
         </div>
         <div class="content">
             <div class="content_top">
-                <h1>新增服务</h1>
-                <div>
-                    <button class="active">咨询服务</button>
-                    <button>健康咨询</button>
-                    <button>方案服务</button>
+                <div class="wallet_edit">
+                    <div class="walletCon">
+                        <div class="walletTitle">
+                            <div>高血压专栏</div><span>8人关注</span>
+                        </div>
+                        <div class="wallet_intro">
+                            <h3>专栏简介</h3>
+                            <p>俗话说消息越短，事情越重要!新华社重磅消息的发布，意味着持续月余的中美贸易大战不仅就此停战，并且还将继续开拓更多新的商贸往来机会声明中特别提到双方就扩大制造业产品和服务贸易进行了讨论，就创造有利条件增加上述领域的贸易达成共识。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="listAndAdd">
+                    <button class="management_list">方案列表</button>
+                    <button>新增方案</button>
                 </div>
             </div>
             <div class="content_bottom">
-                <div class="service_add">
-                    <div><label class="mandatory">服务名称</label><input type="text" placeholder="请输入服务名称"></div>
-                    <div><label class="mandatory">服务间接</label><textarea type="text" placeholder="请输入服务简介..."></textarea></div>
-                    <div><label class="mandatory">封面</label>
-                        <div class="inputFile_box">
-                            <span>
-                              <img src="images/add_image.png" alt="">
-                              <input type="file" class="inputFile" accept="image/png,image/jpeg,image/gif">
-                          </span>
-                        </div>
-                    </div>
-                    <div><label>标签</label>
-                        <div class="label_box">
-                            <input type="radio" name="label" id=""><span>热</span>
-                            <input type="radio" name="label" id=""><span>好评</span>
-                            <input type="radio" name="label" id=""><span>6折</span>
-                            <input type="radio" name="label" id=""><span>7折</span>
-                            <input type="radio" name="label" id=""><span>8折</span>
-                            <input type="radio" name="label" id=""><span>9折</span>
-                        </div>
-                    </div>
-                    <div><label class="mandatory">咨询价格</label>
-                        <div class="price_box">
-
-                        </div>
-                        <div class="addprice_btn">添加</div>
-                    </div>
-                    <div><label>咨询特色</label><textarea type="text" placeholder="请输入咨询特色..."></textarea></div>
-                </div>
-                <div class="operatingArea">
-                    <button>直接发布</button>
-                    <button>存为草稿</button>
-                    <button>取消</button>
+                <h1>近期添加的方案</h1>
+                <div class="listArea">
+                    <table align="center">
+                        <thead>
+                            <tr>
+                                <td>序号</td>
+                                <td>方案名</td>
+                                <td>时间</td>
+                                <td>类型</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>体重控制方案</td>
+                                <td>2018/02/12 09:10</td>
+                                <td>方案</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>体重控制方案</td>
+                                <td>2018/02/12 09:10</td>
+                                <td>方案</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>体重控制方案</td>
+                                <td>2018/02/12 09:10</td>
+                                <td>方案</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
-
     </div>
     </div>
 </body>
@@ -131,51 +143,20 @@
             dl.siblings().find('.state').removeClass('icon-chevron').addClass('icon-jiantou');
         }
     });
-    $('.inputFile').change(function() {
-        var _this = $(this);
-        var reader = new FileReader();
-        file = this.files[0];
-        reader.readAsDataURL(file);
-        reader.onload = function(e) {
-            var newUrl = this.result;
-            _this.parents('.inputFile_box').append("<span><img src='" + newUrl + "'/><i class='close'>x</i></span>")
-        };
 
+    $(".Withdraw").click(function() {
+        location.href = 'Withdraw.html'
     })
-    $('.inputFile_box').on('click', '.close', function() {
-        $(this).parent('span').remove();
+    $(".confirm").click(function() {
+
+        $(".mask").fadeOut();
     })
 
-    $(function() {
-        addprice();
-    });
-    $(".addprice_btn").click(function() {
-        addprice();
-
-    });
-    var i = 0;
-
-    function addprice() {
-        var pricehtml = '<div class="addprice"><label class="mandatory">天数</label><input type="text" placeholder="咨询天数"><label class="mandatory">价格</label><input type="text" placeholder="价格">' +
-            '<label>备注</label><input type="text" placeholder="备注"><i class="iconfont icon-jian1"></i></div>';
-        $(".price_box").append(pricehtml);
-        i++;
-        displaydelete(i)
-    }
-    $(".price_box").on("click", ".icon-jian1", function() {
-        $(this).parents(".addprice").remove();
-        i--;
-        displaydelete(i)
-    });
-
-    function displaydelete(params) {
-
-        if (params <= 1) {
-            $(".icon-jian1").fadeOut();
-        } else {
-            $(".icon-jian1").fadeIn();
-        }
-    }
+    /**
+    隔行换色
+        */
+    $("table tr").css("background", "#f1fbf8");
+    $("table tr:even").css("background", "#ffffff");
 </script>
 
 </html>

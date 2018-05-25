@@ -127,10 +127,15 @@
 }
 .main_boby .content .content_bottom .service_add > div .price_box {
   display: inline-block;
-  width: 380px;
+  width: 340px;
   margin-left: 12px;
+  vertical-align: top;
 }
-.main_boby .content .content_bottom .service_add > div .price_box label {
+.main_boby .content .content_bottom .service_add > div .price_box .addprice {
+  width: 336px;
+  display: inline-block;
+}
+.main_boby .content .content_bottom .service_add > div .price_box .addprice label {
   width: 28px;
   color: #999999;
   font-size: 14px;
@@ -139,10 +144,10 @@
   line-height: 44px;
   vertical-align: top;
 }
-.main_boby .content .content_bottom .service_add > div .price_box label.mandatory {
+.main_boby .content .content_bottom .service_add > div .price_box .addprice label.mandatory {
   position: relative;
 }
-.main_boby .content .content_bottom .service_add > div .price_box label.mandatory::after {
+.main_boby .content .content_bottom .service_add > div .price_box .addprice label.mandatory::after {
   content: "*";
   position: absolute;
   line-height: 20px;
@@ -153,7 +158,7 @@
   top: 16px;
   right: -12px;
 }
-.main_boby .content .content_bottom .service_add > div .price_box input {
+.main_boby .content .content_bottom .service_add > div .price_box .addprice input {
   height: 40px;
   background: #f5f5f5;
   margin-left: 15px;
@@ -162,8 +167,22 @@
   padding: 12px 13px;
   width: 57px;
 }
-.main_boby .content .content_bottom .service_add > div .price_box input:focus {
+.main_boby .content .content_bottom .service_add > div .price_box .addprice input:focus {
   border: 1px #10d1a0 solid;
+}
+.main_boby .content .content_bottom .service_add > div .price_box .addprice i {
+  margin-left: 10px;
+}
+.main_boby .content .content_bottom .service_add > div .addprice_btn {
+  display: inline-block;
+  width: 45px;
+  height: 25px;
+  border: 1px solid #10d1a0;
+  color: #10d1a0;
+  border-radius: 3px;
+  line-height: 25px;
+  text-align: center;
+  cursor: pointer;
 }
 .main_boby .content .content_bottom .service_add > div .scheme_price_box {
   display: inline-block;
