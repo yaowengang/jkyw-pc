@@ -1,0 +1,156 @@
+  .edit_User{
+    width: 460px;
+    height: 480px;
+    position: absolute;
+    left: 320px;
+    top: 120px;
+    border-radius: 5px;
+    background: #ffffff;
+    display: none;
+    .icon-guanbi{
+      position: absolute;
+      right:10px;
+      top:10px;
+      font-size: 16px;
+      color: #b8b8b8;
+      cursor: pointer;
+    }    
+    .edit_user_list{
+      width: 256px;
+      border-right: 1px solid #e6e6e6;
+      height: 100%;
+      overflow: hidden;
+      float: left;
+      .search{
+        width: 224px;
+        margin: 13px;
+        height: 30px;
+        border: 1px solid #d9d9d9;
+        border-radius: 5px;
+        line-height: 30px;
+        position: fixed;
+        .icon-sousuo {
+          width: 30px;
+          height: 30px;
+          text-align: center;
+          color: #10d1a0;
+          font-size: 16px;
+          display: inline-block;
+        }
+        .searchInput {
+          line-height: 28px;
+          vertical-align: top;
+          width:184px;
+        }                 
+      }
+      .list_box{
+        width: 100%;
+        margin-top: 56px;
+        padding: 0px 15px;
+        overflow: hidden;
+        height: 424px;
+        overflow: auto;        
+      ul{
+        width: 100%;
+
+        li{
+          height: 40px;
+          margin: 7px auto;
+          img{
+            width: 40px;
+            height: 40px;
+            border-radius: 2px;
+            -moz-border-radius: 2px;
+            -webkit-border-radius: 2px;
+            float: left;
+            cursor: pointer;        
+          }
+          span{
+            display: inline-block;
+            line-height: 40px;
+            margin-left: 10px;
+          }
+          i{
+            float: right;
+            line-height: 40px;
+            font-size: 20px;
+            color: #c4c4c4;
+            &.icon-xuanzhong1{
+              color: #10d1a0;
+            }
+          }       
+        }
+      }
+    }
+    }
+    .edit_user_Pending{
+      width: 185px;
+      height: 100%;
+      float: left;
+      .tips{
+        position: fixed;
+        width: 180px;
+        height: 56px;
+        line-height: 56px;
+        font-size: 12px;
+        color: #999999;
+        padding-left: 10px;
+      }
+      .list_box{
+        width: 100%;
+        margin-top: 56px;
+        padding: 0px 15px;
+        overflow: hidden;
+        height: 370px;
+        overflow: auto;
+        ul{
+          width: 100%;
+          li{
+            height: 40px;
+            margin: 7px auto;
+            img{
+              width: 40px;
+              height: 40px;
+              border-radius: 2px;
+              -moz-border-radius: 2px;
+              -webkit-border-radius: 2px;
+              float: left;
+              cursor: pointer;        
+            }
+            span{
+              display: inline-block;
+              line-height: 40px;
+              margin-left: 10px;
+            }
+            i{
+              float: right;
+              line-height: 40px;
+              font-size: 23px;
+              color: #c4c4c4;
+            }       
+          }
+        }        
+      }
+      .operation{
+        width: 100%;
+        padding-left: 30px;
+        button {
+          width: 70px;
+          height: 28px;
+          border-radius: 3px;
+          line-height: 28px;
+          margin: auto 2px;
+          cursor: pointer;
+          display: inline-block;
+          &.confirm{
+            background: #10d1a0;
+            color: #ffffff;
+          }
+          &.close{
+            background: #e6e6e6;
+            color: #666666;
+          }          
+        }        
+      }
+    }
+  }

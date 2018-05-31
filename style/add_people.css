@@ -1,0 +1,155 @@
+.edit_User {
+  width: 460px;
+  height: 480px;
+  position: absolute;
+  left: 320px;
+  top: 120px;
+  border-radius: 5px;
+  background: #ffffff;
+  display: none;
+}
+.edit_User .icon-guanbi {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 16px;
+  color: #b8b8b8;
+  cursor: pointer;
+}
+.edit_User .edit_user_list {
+  width: 256px;
+  border-right: 1px solid #e6e6e6;
+  height: 100%;
+  overflow: hidden;
+  float: left;
+}
+.edit_User .edit_user_list .search {
+  width: 224px;
+  margin: 13px;
+  height: 30px;
+  border: 1px solid #d9d9d9;
+  border-radius: 5px;
+  line-height: 30px;
+  position: fixed;
+}
+.edit_User .edit_user_list .search .icon-sousuo {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  color: #10d1a0;
+  font-size: 16px;
+  display: inline-block;
+}
+.edit_User .edit_user_list .search .searchInput {
+  line-height: 28px;
+  vertical-align: top;
+  width: 184px;
+}
+.edit_User .edit_user_list .list_box {
+  width: 100%;
+  margin-top: 56px;
+  padding: 0px 15px;
+  overflow: hidden;
+  height: 424px;
+  overflow: auto;
+}
+.edit_User .edit_user_list .list_box ul {
+  width: 100%;
+}
+.edit_User .edit_user_list .list_box ul li {
+  height: 40px;
+  margin: 7px auto;
+}
+.edit_User .edit_user_list .list_box ul li img {
+  width: 40px;
+  height: 40px;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  float: left;
+  cursor: pointer;
+}
+.edit_User .edit_user_list .list_box ul li span {
+  display: inline-block;
+  line-height: 40px;
+  margin-left: 10px;
+}
+.edit_User .edit_user_list .list_box ul li i {
+  float: right;
+  line-height: 40px;
+  font-size: 20px;
+  color: #c4c4c4;
+}
+.edit_User .edit_user_list .list_box ul li i.icon-xuanzhong1 {
+  color: #10d1a0;
+}
+.edit_User .edit_user_Pending {
+  width: 185px;
+  height: 100%;
+  float: left;
+}
+.edit_User .edit_user_Pending .tips {
+  position: fixed;
+  width: 180px;
+  height: 56px;
+  line-height: 56px;
+  font-size: 12px;
+  color: #999999;
+  padding-left: 10px;
+}
+.edit_User .edit_user_Pending .list_box {
+  width: 100%;
+  margin-top: 56px;
+  padding: 0px 15px;
+  overflow: hidden;
+  height: 370px;
+  overflow: auto;
+}
+.edit_User .edit_user_Pending .list_box ul {
+  width: 100%;
+}
+.edit_User .edit_user_Pending .list_box ul li {
+  height: 40px;
+  margin: 7px auto;
+}
+.edit_User .edit_user_Pending .list_box ul li img {
+  width: 40px;
+  height: 40px;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  float: left;
+  cursor: pointer;
+}
+.edit_User .edit_user_Pending .list_box ul li span {
+  display: inline-block;
+  line-height: 40px;
+  margin-left: 10px;
+}
+.edit_User .edit_user_Pending .list_box ul li i {
+  float: right;
+  line-height: 40px;
+  font-size: 23px;
+  color: #c4c4c4;
+}
+.edit_User .edit_user_Pending .operation {
+  width: 100%;
+  padding-left: 30px;
+}
+.edit_User .edit_user_Pending .operation button {
+  width: 70px;
+  height: 28px;
+  border-radius: 3px;
+  line-height: 28px;
+  margin: auto 2px;
+  cursor: pointer;
+  display: inline-block;
+}
+.edit_User .edit_user_Pending .operation button.confirm {
+  background: #10d1a0;
+  color: #ffffff;
+}
+.edit_User .edit_user_Pending .operation button.close {
+  background: #e6e6e6;
+  color: #666666;
+}
